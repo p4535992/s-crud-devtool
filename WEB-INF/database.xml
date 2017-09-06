@@ -1,0 +1,97 @@
+<web-app xmlns="http://caucho.com/ns/resin">
+ 
+ <!-- 
+  <database>
+    <jndi-name>jdbc/icd10</jndi-name>
+    <driver>
+       <type>org.h2.Driver</type>
+       <url>jdbc:h2:C:/H2DB/icd10/icd10;IGNORECASE=TRUE</url>  
+       <user>SA</user>
+       <password></password>
+	  </driver>
+  </database>  
+
+  <database>
+        <jndi-name>jdbc/hascdb</jndi-name>
+        <driver>
+            <type>org.h2.jdbcx.JdbcDataSource</type>
+            <url>jdbc:h2:C:/H2DB/india/hascdb;IGNORECASE=TRUE</url>  
+            <user>SA</user>
+            <password></password>
+        </driver>
+   </database>  
+	 
+	 <database>
+    <jndi-name>jdbc/sqlite</jndi-name>
+    <driver>
+       <type>org.sqlite.JDBC</type>
+       <url>jdbc:sqlite:C:/SQLITEDB/testme.sqd</url>
+       <user></user>
+       <password></password>
+      </driver>
+  </database>    
+	 
+	 
+   
+   <database>
+        <jndi-name>jdbc/smsdb</jndi-name>
+        <driver>
+            <type>org.h2.jdbcx.JdbcDataSource</type>
+            <url>jdbc:h2:/home/vcomp/h2db/schoolquizplus/smsdb;IGNORECASE=TRUE </url>  
+            <user>SA</user>
+            <password></password>
+        </driver>
+   </database> 
+   <database>
+        <jndi-name>jdbc/maildb</jndi-name>
+        <driver>
+            <type>org.h2.Driver</type>
+            <url>jdbc:h2:/home/vcomp/h2db/schoolquizplus/maildb;IGNORECASE=TRUE </url>  
+            <user>SA</user>
+            <password></password>
+        </driver>
+   </database> 
+   
+  <database>
+          <jndi-name>jdbc/schoolquiz</jndi-name>
+	      <driver>
+               <type>com.mysql.jdbc.Driver</type>
+               <url>jdbc:mysql://localhost:3306/schoolquiz?characterEncoding=UTF-8&amp;autoReconnect=true</url>
+	           <user>root</user>
+               <password></password>
+	      </driver>
+	      <prepared-statement-cache-size>8</prepared-statement-cache-size>
+          <max-connections>100</max-connections> 
+          <max-create-connections>30</max-create-connections> 
+   </database> 
+   
+   <database>
+   <jndi-name>jdbc/libraryadmin</jndi-name>
+   <driver>
+      <type>com.mysql.jdbc.Driver</type>
+      <url>jdbc:mysql://localhost:3306/libraryadmin?characterEncoding=UTF-8</url> 
+      <user>root</user>
+      <password></password>
+      </driver>
+      <prepared-statement-cache-size>8</prepared-statement-cache-size>
+   <max-connections>20</max-connections> 
+   <max-idle-time>30s</max-idle-time> 
+ </database>
+ 
+  
+   
+  <database>
+          <jndi-name>jdbc/cms</jndi-name>
+	      <driver>
+               <type>com.mysql.jdbc.Driver</type>
+               <url>jdbc:mysql://localhost:3306/cms?characterEncoding=UTF-8&amp;autoReconnect=true</url>
+	           <user>root</user>
+               <password></password>
+	      </driver>
+	      <prepared-statement-cache-size>8</prepared-statement-cache-size>
+          <max-connections>100</max-connections> 
+          <max-create-connections>30</max-create-connections> 
+   </database> 
+  --> 
+</web-app>
+

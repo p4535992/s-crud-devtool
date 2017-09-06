@@ -1,0 +1,6 @@
+<script src="<%=appPath %>/assets/vendor/nicescroll/jquery.nicescroll.min.js"></script>
+<script>
+$(function() {
+	$("html").niceScroll();
+});
+</script>

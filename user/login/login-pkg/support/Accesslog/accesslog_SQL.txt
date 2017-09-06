@@ -1,0 +1,18 @@
+USE `$DATABASE`;
+
+/*Table structure for table `accesslogof$TABLENAME` */
+
+DROP TABLE IF EXISTS `accesslogof$TABLENAME`;
+
+CREATE TABLE `accesslogof$TABLENAME` (
+  `RecordID` int(11) NOT NULL AUTO_INCREMENT,
+  `$IDFIELD` int(11) DEFAULT NULL,
+  `LoginTime` datetime DEFAULT NULL,
+  `LogoutTime` datetime DEFAULT NULL,
+  `IPAddress` varchar(50) DEFAULT '',
+  `Flag` smallint(6) DEFAULT NULL,
+  PRIMARY KEY (`RecordID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+/*ADD INDEX*/
+ALTER TABLE `accesslogof$TABLENAME` ADD INDEX `$IDFIELD` (`$IDFIELD`) ;

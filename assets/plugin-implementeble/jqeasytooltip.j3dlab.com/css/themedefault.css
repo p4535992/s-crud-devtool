@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+
+*{ font-family:'PT Sans'; color: #929292;}
+body{background-color:#fff;}
+h1,h2{ }
+
+h1{color:#00acee;}
+h2{color:#00acee;}
+h3{color:#00acee;}
+h4{color:#929292;}
+
+
+::-moz-selection{ background:#00acee; color:#fff;}
+::-webkit-selection{ background:#00acee; color:#fff;}
+::-ms-selection{ background:#00acee; color:#fff;}
+::-o-selection{ background:#00acee; color:#fff;}
+::selection{ background:#00acee; color:#fff;}
+
+
+.corporatecolor{ color:#00acee !important;}
+.whitecolor{ color:#fff !important;}
+.corporatecolornegative{ padding: 0 5px; background:#00acee !important; color:#fff !important;}
+
+strong{color:#929292;}
+
+
+
+/*Header ----------------------------------------------------------------------------------------------------------------------*/
+header .slogan span{ font-family: 'Damion'; color: #929292; }
+header nav ul { border-bottom:#E7E7E7 solid 1px; float: left; width: 100%; }
+header nav ul li {}
+header nav ul li a{ color:#929292; }
+header nav ul li a:hover:before{ color:#00acee; background: #0f0;}
+
+
+/*Buttons ----------------------------------------------------------------------------------------------------------------------*/
+.button{ color: #fff;}
+.button *{ color: #fff;}
+.button.orange{ background: #ff9000; border:solid #ffbc65 3px; }
+.button.blue{ background: #00acee; border:solid #a6d9ed 4px; }
+.button.red{ background: #fd2d2d; border:solid #fe5f5f 4px; }
+
+/*Solid Rows --------------------------------------------------------------------------------------------------------------------*/
+.bluerow{ background: #00acee;}
+.bluerow p{ color: #fff;}
+.greyrow{ background: #292929;}
+.greysoftrow{ background: #f7f7f7;}
+.orangerow{ background: #ff9000;}
+.orangerow *{ color:#fff !important;}
+/*custom tip*/
+.customeasytip,.formcustomeasytip{ cursor: pointer;}
+#ANIMATIONS .customeasytip, #POSITIONS .customeasytip, #ICONS .customeasytip, #CONTENTS .customeasytip, #EVENTS .customeasytip,#beCREATIVE .customeasytip,#FORMS .customeasytip,#FORMS .formcustomeasytip{  transition:all 0.5s; -webkit-transition:all 0.5s;  border: 1px solid #ccc; text-align: center; display: block; padding: 20px 0;}
+#ANIMATIONS .customeasytip:hover, #POSITIONS .customeasytip:hover, #ICONS .customeasytip:hover, #CONTENTS .customeasytip:hover, #EVENTS .customeasytip:hover{ background: #ededed; opacity: 0.8;}
+
+.tipthemesquarecustom{  background-color: #333; border:1px solid #00ACEE; border-radius: 5px !important; font-size:15px !important;}
+.tipthemesquarecustom,.tipthemesquarecustom *:not(i){ color:#fff !important;  font-size:15px !important;}
+.tipthemesquarecustom:before{border-color: #00ACEE; }
+.tipthemesquarecustom:after{border-color: #333; }
+.tipthemesquarecustom h1, .tipthemesquarecustom h2, .tipthemesquarecustom h3, .tipthemesquarecustom h4{ color: #00ACEE !important; font-size: 18px !important;}
+
+
+.tipthemesquarecustom2{color:#333 !important;  background-color: #fff; border:1px solid #00ACEE; border-radius: 5px !important; font-size:15px !important;}
+.tipthemesquarecustom2,.tipthemesquarecustom2 *:not(i){ color:#333 !important;  font-size:15px !important;}
+.tipthemesquarecustom2:before{border-color: #00ACEE; }
+.tipthemesquarecustom2:after{border-color: #fff; }
+
+/*demo forms*/
+
+#tagcontentForm{padding:10px 22px 20px 10px;}
+#tagcontentForm ol,#tagcontentForm  li{width:100%;}
+
+#tagcontentForm li span{display: block; margin: 5px auto;}
+#tagcontentForm input{width:100%;padding:3px; background-color: #999 ; border:none;}
+#tagcontentForm button{float: right;    margin: 20px 0 0; color:#000 !important; padding:10px;}
+ol{margin:0;padding:0;}
+
+/*comic special*/
+.tipthemewhite .specialcomic{ font-size: 20px !important; bottom:80%;}
+
+.tipthemewhitecustom{color:#333 !important;  background-color: #fff; border:1px solid #00ACEE; border-radius: 5px !important; font-size:15px !important; margin-top:-70px}
+.tipthemewhitecustom .specialcomic{ font-size: 20px !important;}
+.tipthemewhitecustom,.tipthemewhitecustom *:not(i){ color:#333 !important;  font-size:15px !important;}
+.tipthemewhitecustom:before{border-color: #00ACEE; }
+.tipthemewhitecustom:after{border-color: #fff; }
+
+.tipthemewhitecustom:before, .tipthemewhitecustom:after 	{ content: ''; border-width: 10px; display: inline-block; border-style: solid; border-color:inherit; border-top-color: transparent !important; border-bottom-color: transparent !important; border-left-color: transparent !important; position: absolute; !important; transform:translateY(10px); -webkit-transform:translateY(10px);}
+
+
+/*table*/
+
+table#compativilityicos{ width:5%; float: left;}
+
+table#compativilityicos tr td{ height: 47px;}
+
+table#compativility{ width: 95%; float: right;}
+table#compativility tr{ border-bottom:1px  solid #e2e2e2; height: 20px;}
+table#compativility tr:first-child{ font-weight: bold;  }
+table#compativility tr td{  text-align: center; padding: 12px 10px; }
+table#compativility tr td:first-child{ text-align: left;}
+table#compativility tr td.ok{ background: url('icos/tick.html') no-repeat center center;   }
+table#compativility tr td.ko{ background: url('icos/ko.html') no-repeat center center;   }
+
+
+/*Slider -----------------------------------------------------------------------------------------------------------------------*/
+h2,h3{ color: #929292; }
+h3.strong{ color: #525252;}
+h2 *, h3 *{ color: #00acee; }
+.slider-content h3 { color: #969595; }
+.slider-content p{ color: #929292; }
+.slider-content .red{color:#00ACEE; font-weight: bold;}
+
+/*Content ----------------------------------------------------------------------------------------------------------------------*/
+
+
+/*testimonials*/
+#testimonials .prev span, #testimonials .next span {  color: #fff;}
+
+
+/*Quotes ----------------------------------------------------------------------------------------------------------------------*/
+.quote{ color: #fff; }
+.quote .quoteautor{ color: #fff; }
+
+/*Forms ----------------------------------------------------------------------------------------------------------------------*/
+textarea{box-shadow: 0 0 0px 4px #ebebeb inset; background: none; }
+input[type="text"]:focus{ box-shadow: -2px 2px 0 0 #00acee;}
+textarea:focus{ box-shadow: -2px 2px 0 0 #00acee,0 0 0px 4px #ebebeb inset;}
+
+/*Footer ----------------------------------------------------------------------------------------------------------------------*/
+
+footer *[class*="icon-"]{background: #929292; color: #292929;}
+
+footer *[class*="icon-"]:hover{ color: #00acee; background:none; }
+
+
+
+@media only screen and (max-width: 720px) {
+
+}
+
+@media only screen and (min-width: 720px) {
+
+
+
+}

@@ -1,0 +1,101 @@
+<script src="<%=appPath %>/assets/vendor/tabdrop/bootstrap-tabdrop.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+$('.nav-pills-drop, .nav-tabs-drop').tabdrop();
+});
+// -->
+</script>
+
+/*For responsive tabs*/
+
+
+.nav-tabs-drop,
+.nav-pills-drop {
+  position: relative;
+}
+
+.tab-content-drop 
+{
+    
+height: 100%; 
+    
+border-left: 1px solid #ddd;
+    
+border-right: 1px solid #ddd;
+		
+border-bottom: 1px solid #ddd;
+		
+background-color: #ffffff;
+		
+border-radius: 0 0 5px 5px;
+    
+padding: 14px 10px;	
+
+}
+
+
+.nav-tabs-drop > li.active > a::before {
+    
+background: #3bafda none repeat scroll 0 0;
+    
+content: "";
+    
+display: block;
+    
+height: 2px;
+    
+left: 0;
+    
+position: absolute;
+    
+top: -2px;
+    
+width: 100%;
+
+}
+
+.nav-tabs-drop > li > a 
+{
+    
+background: #f5f5f5 none repeat scroll 0 0;
+    
+
+}
+
+<ul class="nav nav-tabs nav-tabs-drop">
+    <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+    <li class=""><a href="#tab2" data-toggle="tab">Section 2</a></li>
+    <li class=""><a href="#tab3" data-toggle="tab">Section 3</a></li>
+    <li class=""><a href="#tab4" data-toggle="tab">Section 4</a></li>
+    <li class=""><a href="#tab5" data-toggle="tab">Section 5</a></li>
+    <li class=""><a href="#tab6" data-toggle="tab">Section 6</a></li>
+    <li class=""><a href="#tab7" data-toggle="tab">Section 7</a></li>
+    <li class=""><a href="#tab8" data-toggle="tab">Section 8</a></li> 
+</ul>
+              <div class="tab-content tab-content-drop">
+                <div id="tab1" class="tab-pane active">
+                  <p>I'm in Section 1.</p>
+                </div>
+                <div id="tab2" class="tab-pane">
+                  <p>Howdy, I'm in Section 2.</p>
+                </div>
+                <div id="tab3" class="tab-pane">
+                  <p>What up girl, this is Section 3.</p>
+                </div>
+                <div id="tab4" class="tab-pane">
+                  <p>Howdy, I'm in Section 4.</p>
+                </div>
+                <div id="tab5" class="tab-pane">
+                  <p>What up girl, this is Section 5.</p>
+                </div>
+                <div id="tab6" class="tab-pane">
+                  <p>Howdy, I'm in Section 6.</p>
+                </div>
+                <div id="tab7" class="tab-pane">
+                  <p>What up girl, this is Section 7.</p>
+                </div>
+                <div id="tab8" class="tab-pane">
+                  <p>Howdy, I'm in Section 8.</p>
+                </div>
+              </div>

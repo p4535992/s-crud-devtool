@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userlist>
+    <alwayspermit defaultuser="vcomp">
+	   <ip>[::1]</ip>
+       <ip>0:0:0:0:0:0:0:1</ip>	   
+	   <ip>127.0.0.1</ip>
+       <ip>192.168.1.5</ip>
+	</alwayspermit>
+    <!-- User list begin -->
+	<user  name="COMMONMAN" title="DevTool User" id="vcomp" password="blackbelt" role="WizardUser" />
+    <!-- User list end -->
+		
+		<!-- Role based path permissions -->
+    <permit role="WizardUser" >
+        <url>/foo/bar</url>
+    </permit>
+
+</userlist>

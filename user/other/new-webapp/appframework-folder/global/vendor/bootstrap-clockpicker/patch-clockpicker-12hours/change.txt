@@ -1,0 +1,10 @@
+https://github.com/JordyMoos/clockpicker
+
+change 
+
+1>
+public static java.text.SimpleDateFormat FMT_TIME_CLOCKPICKER_READ = new java.text.SimpleDateFormat("hh:mm a") ;
+
+2>
+global\js\components > bootstrap-clockpicker.min.js
+,twelvehour: true,ampmSubmit: true

@@ -1,0 +1,23 @@
+int gen() {
+    Random r = new Random( System.currentTimeMillis() );
+    return ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
+}
+
+***********************************************************
+
+String GenerateRandomNumber(int charLength) {
+        return String.valueOf(charLength < 1 ? 0 : new Random()
+                .nextInt((9 * (int) Math.pow(10, charLength - 1)) - 1)
+                + (int) Math.pow(10, charLength - 1));
+    }
+
+***********************************************************
+
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function generateCaptcha() {
+        $('#MathcaptchaOperation').html([randomNumber(1, 100), '+', randomNumber(1, 200),  '='].join(' '));
+    }
+    generateCaptcha();

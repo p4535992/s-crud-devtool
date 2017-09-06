@@ -1,0 +1,28 @@
+ <web-app xmlns="http://caucho.com/ns/resin">  
+
+<!-- Login Setup For Site Manager BEGIN {{ -->
+
+    <servlet servlet-name="AdminLoginServlet" servlet-class="com.webapp.login.LoginServlet" >
+        <init-param LOGIN-HOME="/admin/index.jsp" />
+        <init-param LOGIN-ERROR="/AdminLoginForm.jsp" />
+        <init-param LOGIN-OBJECT-CLASS="com.$WEBAPP.LoggedSitemanager" />
+        <init-param LOGIN-OBJECT-ID="theSitemanager"  />
+        <init-param LOGIN-ROLE="Administrator"  />
+
+        <init-param SQL-ENGINE="MYSQL"  />
+
+    </servlet>
+    <servlet-mapping url-pattern="*/admin_login_check/*" servlet-name="AdminLoginServlet"/>
+
+    <filter filter-name="AdminLoginFilter" filter-class="com.webapp.login.LoginFilter" >
+         <init-param LOGIN-HOME="/admin/index.jsp"/>
+         <init-param LOGIN-FORM="/AdminLoginForm.jsp"/>
+         <init-param LOGIN-OBJECT-ID="theSitemanager" />
+         <init-param LOGIN-ROLE="Administrator"  />
+
+    </filter>
+    <filter-mapping url-pattern="*/admin/*" filter-name="AdminLoginFilter"/> 
+
+<!-- }} END Login Setup For Site Manager  -->
+
+ </web-app>

@@ -1,0 +1,15 @@
+ <web-app xmlns="http://caucho.com/ns/resin">    
+  
+   <context-param>
+         <param-name>MAIL-DATASOURCE</param-name>
+         <param-value>jdbc/$DATABASE</param-value>
+    </context-param> 
+
+	<listener>
+        <listener-class>com.$WEBAPP.appmail.GenericMailContextListner</listener-class>
+    </listener>
+  
+ </web-app>
+
+
+        

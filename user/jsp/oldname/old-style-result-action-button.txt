@@ -1,0 +1,11 @@
+<\% if(bAllowUpdate == false && bAllowDelete == false){ %> <\% } else { %>
+<td class="text-center">
+<button onclick="NavigateTo('<\%=thisFile %>?Action=Show&<%=IDField  %>=<\%=<%=BeanName %>.<%=IDField %> %><\%=ForeignKeyParam %><\%=ReturnPathLink %>')" class="btn btn-icon btn-default btn-outline" type="button" style="padding: 5px;" data-original-title="View" data-trigger="hover" data-placement="top" data-toggle="tooltip"><i aria-hidden="true" class="icon wb-eye iccolor"></i></button>
+<\% if(bAllowUpdate == true){ %>
+<button onclick="NavigateTo('<\%=thisFile %>?Action=Change&<%=IDField  %>=<\%=<%=BeanName %>.<%=IDField %> %><\%=ForeignKeyParam %><\%=ReturnPathLink %>')" class="btn btn-icon btn-default btn-outline" type="button" style="padding: 5px;margin-left: 3px;" data-original-title="Edit" data-trigger="hover" data-placement="top" data-toggle="tooltip"><i aria-hidden="true" class="icon wb-pencil iccolor"></i></button>
+<\% } %>
+<\% if(bAllowDelete == true){ %>
+<button onclick="DeleteRecord('<\%=<%=BeanName  %>.<%=IDField  %> %>', '<\%=DelWarning %>', '<\%=thisFile %>?Action=Delete<\%=ForeignKeyParam %><\%=ReturnPathLink %>&<%=IDField  %>=<\%=<%=BeanName  %>.<%=IDField  %> %>' )" class="btn btn-icon btn-default btn-outline" type="button" style="padding: 5px;margin-left: 3px;" data-original-title="Delete" data-trigger="hover" data-placement="top" data-toggle="tooltip"><i aria-hidden="true" class="icon wb-trash iccolor"></i></button>
+<\% } %>
+</td>
+<\% } %>

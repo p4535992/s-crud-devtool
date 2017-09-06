@@ -1,0 +1,96 @@
+/* CSS used here will be applied after bootstrap.css */
+.caret-container {
+  float: right;
+}
+
+.nav-container {
+  background-color: #f5f5f5;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+  
+.nav-sub-container {
+  background-color: #f8f8f8;  
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ul.nav-stacked ul.nav-stacked > li > a {
+  padding-left: 30px;
+}
+
+
+<div class="navbar navbar-fixed navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                <i class="navbar-icon fa fa-bars icon"></i>
+            </a>
+            <a class="navbar-brand" href="/skyspod/index.php/ru/process/user/organization_id/22">easla</a>
+        </div><!-- navbar-header -->
+
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="nav navbar-nav" id="top-menu" role="menu"><li class="dropdown" role="menuitem"><a class="hidden-xs hidden-sm dropdown-toggle" data-toggle="dropdown" href="">???????? <b class="caret"></b></a><ul class="dropdown-menu" id="yt0" aria-labelledby="yt0" role="menu"><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/8">?????????? ???????????</a></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/10">?????????? ?????????????</a></li><li class="active" role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/24">?????????? ???????????</a></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/25">?????????? ?????????</a></li></ul></li><li class="dropdown" role="menuitem"><a class="dropdown-toggle" data-toggle="dropdown" href="">?????????? ??????????? <b class="caret"></b></a><ul class="dropdown-menu" id="yt1" aria-labelledby="yt1" role="menu"><li class="active" role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/24/viewdef_id/61/user_id/33">????????</a></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/24/viewdef_id/68/user_id/33">??? ????????</a></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/24/viewdef_id/62/user_id/33">??????? ???????????</a></li><li class="divider"></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/objectref/trash/process_id/24/user_id/33"><span class="glyphicon glyphicon-trash"></span> ?????????</a></li></ul></li></ul>            <div id="user-menu-container">
+            <ul class="nav navbar-nav navbar-right" id="user-menu" role="menu"><li class="dropdown" role="menuitem"><a class="dropdown-toggle" data-toggle="dropdown" href="">Noname N.N. [admin44] <b class="caret"></b></a><ul class="dropdown-menu" id="yt2" aria-labelledby="yt2" role="menu"><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/user/use/user_id/33">???????</a></li><li class="divider"></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/view/process_id/24">????? ??????????????</a></li><li class="divider"></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/24/user_id/9"><span class="glyphicon glyphicon-user"></span> User 1</a></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/24/user_id/33"><span class="glyphicon glyphicon-user"></span> User 2</a></li><li role="menuitem"><a tabindex="-1" href="/skyspod/index.php/ru/process/use/process_id/24/user_id/34"><span class="glyphicon glyphicon-user"></span> User 3</a></li><li class="divider"></li><li role="menuitem"><a tabindex="-1" href="http://192.168.6.20/skyspod/index.php/ru/logout">?????</a></li></ul></li></ul>            </div>
+        </div><!-- navbar-collapse -->
+    </div><!-- container-fluid -->
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      
+      <ul class="nav nav-pills nav-stacked" id="stacked-menu">
+        <li>
+          <a class="nav-container" data-toggle="collapse" data-parent="#stacked-menu" href="#p1">Process One<div class="caret-container"><span class="caret arrow"></span></div></a>    
+          
+          <ul class="nav nav-pills nav-stacked collapse in" id="p1">
+            <li data-toggle="collapse" data-parent="#p1" href="#pv1">
+              <a class="nav-sub-container">Public Views<div class="caret-container"><span class="caret arrow"></span></div></a></li>
+              <ul class="nav nav-pills nav-stacked collapse in" id="pv1">
+                <li><a href="#">View One</a></li>
+                <li><a href="#">View Two</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="#">Trash</a></li>
+              </ul>
+            
+            
+            <li data-toggle="collapse" data-parent="#p1" href="#pv2">
+              <a class="nav-sub-container">Your Views<div class="caret-container"><span class="caret arrow"></span></div></a></li>
+              <ul class="nav nav-pills nav-stacked collapse in" id="pv2">
+                <li><a href="#">View One</a></li>
+                <li><a href="#">View Two</a></li>
+              </ul>
+            
+
+            <li data-toggle="collapse" data-parent="#p1" href="#pv3">
+              <a class="nav-sub-container">Reports<div class="caret-container"><span class="caret arrow"></span></div></a></li>
+              <ul class="nav nav-pills nav-stacked collapse in" id="pv3">
+                <li><a href="#">Report One</a></li>
+                <li><a href="#">Report Two</a></li>
+              </ul>  
+            
+            
+          </ul>
+          
+        </li>
+        <li>
+          <a class="nav-container" data-toggle="collapse" data-parent="#stacked-menu" href="#p2">Process Two<div class="caret-container"><span class="caret arrow"></span></div></a>          
+          <ul class="nav nav-pills nav-stacked collapse" id="p2">
+            <li><a href="#">View One</a></li>
+            <li><a href="#">View Two</a></li>
+            <li><a href="#">View Three</a></li>
+            <li class="nav-divider"></li>
+            <li><a href="#">Trash</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-container" href="#">Process Three<div class="caret-container"><span class="caret arrow"></span></div></a></li>
+        <li><a class="nav-container" href="#">Process Four<div class="caret-container"><span class="caret arrow"></span></div></a></li>
+      </ul>
+      
+    </div>
+    <div class="col-md-10">
+      CONTENT
+    </div>
+  </div>
+</div>

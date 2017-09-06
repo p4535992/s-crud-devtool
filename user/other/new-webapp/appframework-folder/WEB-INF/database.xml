@@ -1,0 +1,35 @@
+<web-app xmlns="http://caucho.com/ns/resin">
+  
+	    
+     <!-- Acceptable Values For SQL-ENGINE: MYSQL, POSTGRE, DB2, MSSQL ORACLE, H2, SQLITE -->
+     <context-param>
+          <param-name>SQL-ENGINE</param-name>
+          <param-value>MYSQL</param-value>
+     </context-param>
+
+
+	<!-- uncomment it to enable automate Daily-Backup & give appropriate path & backup folder from WEB-INF	 
+	<scheduled-task url="/admin/superadmin/backup/daily_backup.jsp">
+		<cron>0 20 * * *</cron>
+	</scheduled-task>    
+	-->	 
+	 
+      <!-- 
+         MySQL supplied connection pool: com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource
+         Caucho Resin supplied connection pool: com.mysql.jdbc.Driver      
+	    -->
+
+ <database>
+   <jndi-name>jdbc/$DATABASE</jndi-name>
+	 <driver>
+       <type>com.mysql.jdbc.Driver</type>
+      <url>jdbc:mysql://localhost:3306/$DATABASE?characterEncoding=UTF-8&amp;autoReconnect=true</url>
+	  <user>root</user>
+      <password></password>
+	 </driver>
+	 <prepared-statement-cache-size>8</prepared-statement-cache-size>
+   <max-connections>20</max-connections> 
+   <max-idle-time>30s</max-idle-time> 
+ </database> 
+ 
+</web-app>

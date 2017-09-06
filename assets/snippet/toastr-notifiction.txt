@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="<%=appPath %>/assets/vendor/toastr/toastr.min.css" />	
+
+<script src="<%=appPath %>/assets/vendor/toastr/toastr.min.js"></script>
+
+
+// for success - green box
+toastr.success('Success messages');
+
+// for errors - red box
+toastr.error('errors messages');
+
+// for warning - orange box
+toastr.warning('warning messages');
+
+// for info - blue box
+toastr.info('info messages');

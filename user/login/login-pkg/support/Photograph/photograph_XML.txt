@@ -1,0 +1,11 @@
+
+  <!-- Image servlet for $CTABLENAME photograph  -->
+  <servlet servlet-name='$TABLENAMEphoto' servlet-class='com.webapp.servlet.image'>
+   <init-param DSN='jdbc/$DATABASE'/>
+	 <init-param TABLE='$TABLENAME_photograph'/>
+	 <init-param IMAGEFIELD='Photograph'/>
+	 <init-param IDFIELD='$IDFIELD'/>
+	 <init-param DEFAULTIMAGE='/images/logo/nophoto.png'/>
+
+  </servlet>
+  <servlet-mapping url-pattern='*/$TABLENAMEphoto/*' servlet-name='$TABLENAMEphoto'/>

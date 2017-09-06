@@ -1,0 +1,20 @@
+HTTrack3.48-3+htsswf+htsjava launched on Wed, 16 Dec 2015 12:05:34 at http://jqeasytooltip.j3dlab.com/ +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv
+(winhttrack -qwr20C2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2013], %s -->" -%l "en, *" http://jqeasytooltip.j3dlab.com/ -O1 "C:\My Web Sites\jqeasytooltip" +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv )
+Information, Warnings and Errors reported for this mirror:
+note: the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+ such as username/password authentication for websites mirrored in this project
+ do not share these files/folders if you want these information to remain private
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/wordpress.html (from jqeasytooltip.j3dlab.com/)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/css/icos/wordpress_W.png (from jqeasytooltip.j3dlab.com/)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/css/icos/tick.png (from jqeasytooltip.j3dlab.com/css/main.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/fonts/icomoon.eot (from jqeasytooltip.j3dlab.com/css/iconmoon.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/fonts/icomoon.eot? (from jqeasytooltip.j3dlab.com/css/iconmoon.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/fonts/icomoon.woff (from jqeasytooltip.j3dlab.com/css/iconmoon.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/fonts/icomoon.svg (from jqeasytooltip.j3dlab.com/css/iconmoon.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/css/icos/ko.png (from jqeasytooltip.j3dlab.com/css/themedefault.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/jqeasytooltip/fonts/fontawesome-webfont.eot?v=4.0.3 (from jqeasytooltip.j3dlab.com/jqeasytooltip/css/font-awesome.min.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/jqeasytooltip/fonts/fontawesome-webfont.eot? (from jqeasytooltip.j3dlab.com/jqeasytooltip/css/font-awesome.min.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/jqeasytooltip/fonts/fontawesome-webfont.ttf?v=4.0.3 (from jqeasytooltip.j3dlab.com/jqeasytooltip/css/font-awesome.min.css)
+12:07:03 Error:  "Forbidden" (403) at link jqeasytooltip.j3dlab.com/jqeasytooltip/fonts/fontawesome-webfont.svg?v=4.0.3 (from jqeasytooltip.j3dlab.com/jqeasytooltip/css/font-awesome.min.css)
+HTTrack Website Copier/3.48-3 mirror complete in 1 minutes 29 seconds : 97 links scanned, 84 files written (2060249 bytes overall) [2071209 bytes received at 23272 bytes/sec], 26285 bytes transferred using HTTP compression in 1 files, ratio 41%, 13.8 requests per connection
+(12 errors, 0 warnings, 0 messages)

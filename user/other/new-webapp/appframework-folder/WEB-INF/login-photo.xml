@@ -1,0 +1,14 @@
+<web-app xmlns="http://caucho.com/ns/resin">
+
+ <!-- Image servlet for Sitemanager photograph  -->
+  <servlet servlet-name='sitemanagerphoto' servlet-class='com.webapp.servlet.image'>
+   <init-param DSN='jdbc/$DATABASE'/>
+	 <init-param TABLE='sitemanager_photograph'/>
+	 <init-param IMAGEFIELD='Photograph'/>
+	 <init-param IDFIELD='AdminID'/>
+	 <init-param DEFAULTIMAGE='/images/logo/nophoto.png'/>
+
+  </servlet>
+  <servlet-mapping url-pattern='*/sitemanagerphoto/*' servlet-name='sitemanagerphoto'/>
+  
+</web-app>

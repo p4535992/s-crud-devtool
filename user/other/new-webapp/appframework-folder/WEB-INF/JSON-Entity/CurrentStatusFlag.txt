@@ -1,0 +1,1 @@
+{ "PackageName":"com.$WEBAPP", "ClassName":"CurrentStatusFlag" , "FieldItems": [ {"Value":"-1","Field":"BARRED","Label":"Login Barred"}, {"Value":"0","Field":"UNKNOWN","Label":"Unknown"}, {"Value":"1","Field":"OK","Label":"Login OK"}, {"Value":"2","Field":"LEFT","Label":"Left"} ] }

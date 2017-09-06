@@ -1,0 +1,23 @@
+    if (localStorage.checkBoxValidation && localStorage.checkBoxValidation != '') {
+        $('#rememberMe').attr('checked', 'checked');
+        $('#LoginID').val(localStorage.userName);
+        $('#Password').val(localStorage.password);
+    } else {
+        $('#rememberMe').removeAttr('checked');
+        $('#LoginID').val('');
+        $('#Password').val('');
+    }
+		
+$('#loginForm').on('submit', function() {
+
+        if ($('#rememberMe').is(':checked')) {
+            // save username and password
+            localStorage.userName = $('#LoginID').val();
+            localStorage.password = $('#Password').val();
+            localStorage.checkBoxValidation = $('#rememberMe').val();
+        } else {
+            localStorage.userName = '';
+            localStorage.password = '';
+            localStorage.checkBoxValidation = '';
+        }
+});		

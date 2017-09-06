@@ -1,0 +1,3 @@
+manifest="<%=appPath %>/assets/app.appcache"
+
+<html manifest="<%=appPath %>/assets/app.appcache" class="no-js" lang="en">

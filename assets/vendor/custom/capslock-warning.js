@@ -1,0 +1,1 @@
+!function(o){o("[type=password]").keypress(function(t){var i=o(this),e=o(".tooltip").is(":visible"),s=String.fromCharCode(t.which);s.toUpperCase()!==s||s.toLowerCase()===s||t.shiftKey?e&&i.tooltip("hide"):e||i.tooltip("show"),i.blur(function(o){i.tooltip("hide")})})}(jQuery);

@@ -1,0 +1,41 @@
+<web-app xmlns="http://caucho.com/ns/resin">
+<!--  DROP LISTS DECLARATIONS START -->
+
+<!--  DROP LISTS OF MODULE-->
+
+<servlet servlet-name='ModuleListServlet' servlet-class='com.$WEBAPP.apputil.dbdroplist'>
+      <init-param DSN="jdbc/$DATABASE" />
+	  <init-param TABLE="module" />
+	  <init-param IDFIELD="ModuleID" />
+	  <init-param FIELDS="ModuleName" />
+	  <init-param FORMAT="ModuleName" />
+	  <init-param OPTIONVALUE="null" />
+</servlet> 
+<servlet-mapping url-pattern='*/modulelist/*' servlet-name='ModuleListServlet'/>
+
+<!--  DROP LISTS OF ACTIVITY -->
+ <servlet servlet-name='ActivityListServlet' servlet-class='com.$WEBAPP.apputil.dbdroplist'>
+      <init-param DSN="jdbc/$DATABASE" />
+	  <init-param TABLE="module_activity" />
+	  <init-param IDFIELD="ModuleActivityID" />
+	  <init-param FIELDS="ModuleActivityName" />
+	  <init-param FORMAT="ModuleActivityName" />
+	  <init-param OPTIONVALUE="null" />
+</servlet> 
+<servlet-mapping url-pattern='*/activitylist/*' servlet-name='ActivityListServlet'/>
+
+
+<!--  DROP LISTS OF SMS-Template -->
+
+<servlet servlet-name='TemplateListServlet' servlet-class='com.$WEBAPP.apputil.dbdroplist'>
+      <init-param DSN="jdbc/$DATABASE" />
+	  <init-param TABLE="sms_template" />
+	  <init-param IDFIELD="TemplateID" />
+	  <init-param FIELDS="Name" />
+	  <init-param FORMAT="Name" />
+	  <init-param OPTIONVALUE="Text" />
+</servlet> 
+<servlet-mapping url-pattern='*/templatelist/*' servlet-name='TemplateListServlet'/>
+
+<!--  DROP LISTS DECLARATIONS END -->
+</web-app>

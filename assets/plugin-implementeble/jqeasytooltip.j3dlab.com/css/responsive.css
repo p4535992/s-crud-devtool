@@ -1,0 +1,207 @@
+/*
+	Responsive j3dlab
+	Initial date 9/25/2013
+*/
+.img100{ width: 100%;}
+
+
+.row:before, .row:after , .wrapper:before, .wrapper:after {display: table; line-height: 0; content: "";}
+.row:after, .wrapper:after { clear: both; }
+
+.wrapper{ margin:0 auto; position: relative; display: block; }
+
+
+.row{ width: 100%;}
+*[class*="span"] {  float:left; position: relative; display: inline-block !important; }
+*[class*="PDD_"] { position: relative;}
+*[class*="MRG_"] { position: relative;}
+
+
+
+
+@media (min-width: 320px) {
+	.wrapper{ width:90%; }
+	*[class*="span"]{ width: 100%;}
+
+	.PDD_TRBLx1 { padding: 10px !important;}
+	.PDD_RLx1 	{ padding: 0 10px !important;}
+	.PDD_TBx1 	{ padding: 10px 0 !important;}
+	.PDD_Tx1 	{ padding-top: 10px !important;}
+	.PDD_Rx1 	{ padding-right: 10px !important;}
+	.PDD_Bx1 	{ padding-bottom: 10px !important;}
+	.PDD_Lx1 	{ padding-left: 10px !important;}
+	.PDD_TRBLx2 { padding: 20px !important;}
+	.PDD_TBx2 	{ padding: 20px 0 !important;}
+	.PDD_RLx2 	{ padding: 0 20px !important;}
+	.PDD_Tx2 	{ padding-top: 20px !important;}
+	.PDD_Rx2 	{ padding-right: 20px !important;}
+	.PDD_Bx2 	{ padding-bottom: 20px !important;}
+	.PDD_Lx2 	{ padding-left: 20px !important;}
+	.PDD_TRBLx8 { padding: 80px !important;}
+
+	.MRG_TRBLx1 { margin: 10px !important;}
+	.MRG_TBx1 	{ margin: 10px 0 !important;}
+	.MRG_RLx1 	{ margin: 0 10px !important;}
+	.MRG_Tx1 	{ margin-top: 10px !important;}
+	.MRG_Rx1 	{ margin-right: 10px !important;}
+	.MRG_Bx1 	{ margin-bottom: 10px !important;}
+	.MRG_Lx1 	{ margin-left: 10px !important;}
+	.MRG_TRBLx2 { margin: 20px !important;}
+	.MRG_TBx2 	{ margin: 20px 0 !important;}
+	.MRG_RLx2 	{ margin: 0 20px !important;}
+	.MRG_Tx2 	{ margin-top: 20px !important;}
+	.MRG_Rx2 	{ margin-right: 20px !important;}
+	.MRG_Bx2 	{ margin-bottom: 20px !important;}
+	.MRG_Lx2 	{ margin-left: 20px !important;}
+}
+
+@media (min-width: 720px) {
+	.wrapper{ width: 700px;}
+
+
+
+}
+
+
+@media (min-width: 980px) {
+
+	.wrapper{ width: 960px;}
+
+	.PDD_TRBLx1 { padding: 10px !important;}
+	.PDD_RLx1 	{ padding: 0 10px !important;}
+	.PDD_TBx1 	{ padding: 10px 0 !important;}
+	.PDD_Tx1 	{ padding-top: 10px !important;}
+	.PDD_Rx1 	{ padding-right: 10px !important;}
+	.PDD_Bx1 	{ padding-bottom: 10px !important;}
+	.PDD_Lx1 	{ padding-left: 10px !important;}
+	.PDD_TRBLx2 { padding: 20px !important;}
+	.PDD_TBx2 	{ padding: 20px 0 !important;}
+	.PDD_RLx2 	{ padding: 0 20px !important;}
+	.PDD_Tx2 	{ padding-top: 20px !important;}
+	.PDD_Rx2 	{ padding-right: 20px !important;}
+	.PDD_Bx2 	{ padding-bottom: 20px !important;}
+	.PDD_Lx2 	{ padding-left: 20px !important;}
+	.PDD_TRBLx8 { padding: 80px !important;}
+
+	.MRG_TRBLx1 { margin: 10px !important;}
+	.MRG_TBx1 	{ margin: 10px 0 !important;}
+	.MRG_RLx1 	{ margin: 0 10px !important;}
+	.MRG_Tx1 	{ margin-top: 10px !important;}
+	.MRG_Rx1 	{ margin-right: 10px !important;}
+	.MRG_Bx1 	{ margin-bottom: 10px !important;}
+	.MRG_Lx1 	{ margin-left: 10px !important;}
+	.MRG_TRBLx2 { margin: 20px !important;}
+	.MRG_TBx2 	{ margin: 20px 0 !important;}
+	.MRG_RLx2 	{ margin: 0 20px !important;}
+	.MRG_Tx2 	{ margin-top: 20px !important;}
+	.MRG_Rx2 	{ margin-right: 20px !important;}
+	.MRG_Bx2 	{ margin-bottom: 20px !important;}
+	.MRG_Lx2 	{ margin-left: 20px !important;}
+
+	.span1 		{ width:60px;}
+	.span2 		{ width:140px;}
+	.span3 		{ width:220px;}
+	.span4 		{ width:300px;}
+	.span5 		{ width:380px;}
+	.span6 		{ width:460px;}
+	.span7 		{ width:540px;}
+	.span8 		{ width:620px;}
+	.span9 		{ width:700px;}
+	.span10 	{ width:780px;}
+	.span11 	{ width:860px;}
+	.span12 	{ width:940px;}
+
+	*[class*="span"]{ margin:0 10px;}
+
+	.offset1 	{ margin-left: 80px;}
+	.offset2 	{ margin-left: 170px;}
+	.offset3 	{ margin-left: 240px;}
+	.offset4 	{ margin-left: 320px;}
+	.offset5 	{ margin-left: 400px;}
+	.offset6 	{ margin-left: 490px;}
+	.offset7 	{ margin-left: 560px;}
+	.offset8 	{ margin-left: 640px;}
+	.offset9 	{ margin-left: 720px;}
+	.offset10 	{ margin-left: 800px;}
+	.offset11 	{ margin-left: 880px;}
+	.offset12 	{ margin-left: 960px;}
+
+}
+
+
+@media (min-width: 1200px) {
+
+	.wrapper{ width: 1177px;}
+
+	.PDD_TRBLx1 { padding: 12px !important;}
+	.PDD_RLx1 	{ padding: 0 12px !important;}
+	.PDD_TBx1 	{ padding: 12px 0 !important;}
+	.PDD_Tx1 	{ padding-top: 12px !important;}
+	.PDD_Rx1 	{ padding-right: 12px !important;}
+	.PDD_Bx1 	{ padding-bottom: 12px !important;}
+	.PDD_Lx1 	{ padding-left: 12px !important;}
+	.PDD_TRBLx2 { padding: 24px !important;}
+	.PDD_TBx2 	{ padding: 24px 0 !important;}
+	.PDD_RLx2 	{ padding: 0 24px !important;}
+	.PDD_Tx2 	{ padding-top: 24px !important;}
+	.PDD_Rx2 	{ padding-right: 24px !important;}
+	.PDD_Bx2 	{ padding-bottom: 24px !important;}
+	.PDD_Lx2 	{ padding-left: 24px !important;}
+	.PDD_TRBLx8 { padding: 96px !important;}
+
+	.MRG_TRBLx1 { margin: 12px !important;}
+	.MRG_TBx1 	{ margin-top: 12px !important; margin-bottom:  12px !important;}
+	.MRG_RLx1 	{ margin: 0 12px !important;}
+	.MRG_Tx1 	{ margin-top: 12px !important;}
+	.MRG_Rx1 	{ margin-right: 12px !important;}
+	.MRG_Bx1 	{ margin-bottom: 12px !important;}
+	.MRG_Lx1 	{ margin-left: 12px !important;}
+	.MRG_TRBLx2 { margin: 24px !important;}
+	.MRG_TBx2 	{ margin-top: 24px !important; margin-bottom:  24px !important;}
+	.MRG_RLx2 	{ margin: 0 24px !important;}
+	.MRG_Tx2 	{ margin-top: 24px !important;}
+	.MRG_Rx2 	{ margin-right: 24px !important;}
+	.MRG_Bx2 	{ margin-bottom: 24px !important;}
+	.MRG_Lx2 	{ margin-left: 24px !important;}
+
+	*[class*="span"] {   margin:0 12px;}
+
+	.span1 		{ width:74px;}
+	.span2 		{ width:172px;}
+	.span3 		{ width:270px;}
+	.span4 		{ width:368px;}
+	.span5 		{ width:466px;}
+	.span6 		{ width:563px;}
+	.span7 		{ width:662px;}
+	.span8 		{ width:760px;}
+	.span9 		{ width:858px;}
+	.span10 	{ width:955px;}
+	.span11 	{ width:1054px;}
+	.span12 	{ width:1152px;}
+
+	.offset1 	{ margin-left: 110px;}
+	.offset2 	{ margin-left: 196px;}
+	.offset3 	{ margin-left: 294px;}
+	.offset4 	{ margin-left: 392px;}
+	.offset5 	{ margin-left: 490px;}
+	.offset6 	{ margin-left: 600px;}
+	.offset7 	{ margin-left: 686px;}
+	.offset8 	{ margin-left: 784px;}
+	.offset9 	{ margin-left: 882px;}
+	.offset10 	{ margin-left: 981px;}
+	.offset11 	{ margin-left: 1078px;}
+	.offset12 	{ margin-left: 1177px;}
+}
+
+
+
+
+
+@media screen and (orientation: portrait) {}
+@media screen and (orientation: landscape) {}
+
+
+
+
+
+

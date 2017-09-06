@@ -1,0 +1,24 @@
+SMAP
+_checkbox_22dsupport__jsp.java
+JSP
+*S JSP
+*F
++ 1 checkbox-support.jsp
+user/jsp/include-page/checkbox-support.jsp
+*L
+1#1,8:54
+8#1:62
+11#1,2:63,2
+12#1,2:66
+13#1,2:68
+14#1,2:70
+15#1:72
+18#1,2:73,2
+19#1,2:76
+20#1:78
+27#1:79,2
+46#1:81,2
+59#1:83,2
+78#1:85,2
+88#1:87
+*E

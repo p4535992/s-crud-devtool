@@ -1,0 +1,89 @@
+100–199 Codes in the 100s are informational, indicating that the client should respond with some other action.
+
+200–299 Values in the 200s signify that the request was successful.
+
+300–399 Values in the 300s are used for files that have moved and usually include a Location header indicating the new address.
+
+400–499 Values in the 400s indicate an error by the client.
+
+500–599 Codes in the 500s signify an error by the server.
+ 
+ <error-page>
+		<error-code>404</error-code>
+		<location>/error-404.jsp</location>
+  </error-page>	 
+  
+<error-page>
+    <!-- Missing login -->
+    <error-code>401</error-code>
+    <location>/general-error.html</location>
+</error-page>
+<error-page>
+    <!-- Forbidden directory listing -->
+    <error-code>403</error-code>
+    <location>/general-error.html</location>
+</error-page>
+<error-page>
+    <!-- Missing resource -->
+    <error-code>404</error-code>
+    <location>/Error404.html</location>
+</error-page>
+<error-page>
+    <!-- Uncaught exception -->
+    <error-code>500</error-code>
+    <location>/general-error.html</location>
+</error-page>
+<error-page>
+    <!-- Unsupported servlet method -->
+    <error-code>503</error-code>
+    <location>/general-error.html</location>
+</error-page>  
+  
+*******************************************************
+ <error-page>
+    <error-code>403</error-code>
+    <location>/403.html</location>
+</error-page>
+
+On Servlet 3.0 or newer you could just specify
+<error-page>
+    <location>/error.html</location>
+</error-page>
+
+******************************************************
+
+
+
+from resin
+
+***************************************************
+
+Catching File Not Found
+
+<web-app xmlns="http://caucho.com/ns/resin">
+  <error-page>
+    <error-code>404</error-code>
+    <location>/file_not_found.jsp</location>
+  </error-page>
+</web-app>
+
+Catching Exceptions
+
+<web-app xmlns="http://caucho.com/ns/resin">
+   <error-page exception-type="java.lang.NullPointerException"
+               location="/nullpointer.jsp"/>
+</web-app>
+
+
+Using request attributes to obtain information about the request that caused the error
+<%@ page session="false" isErrorPage="true" %>
+
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<h1>404 Not Found</h1>
+
+The url <code>${requestScope["javax.servlet.error.request_uri"]}</code> 
+was not found.
+</body>
+</html>

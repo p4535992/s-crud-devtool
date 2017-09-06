@@ -1,0 +1,4 @@
+
+<jsp:include page="/tablefields/" flush="true">
+<jsp:param name="Element" value="FLDLIST" />
+</jsp:include>

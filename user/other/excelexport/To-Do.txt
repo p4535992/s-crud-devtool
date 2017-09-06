@@ -1,0 +1,1 @@
+Replace String $WEBAPP with your web application name in all files.

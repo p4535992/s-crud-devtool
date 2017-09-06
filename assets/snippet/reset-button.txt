@@ -1,0 +1,12 @@
+****** formValidation ********
+<button type="button" class="btn btn-primary fRESET">Reset</button>
+//reset button
+$('.fRESET').on("click",function(e){e.preventDefault(),$(this.form).trigger("reset"),$(this.form).data("formValidation").resetForm(!0)});
+
+
+****** jquery validation **************
+<button type="button" class="btn btn-primary jRESET">Reset</button>
+//reset button
+$('.jRESET').on("click",function(e){e.preventDefault(),$(this.form).trigger("reset"),$(this.form).validate().resetForm()});
+
+

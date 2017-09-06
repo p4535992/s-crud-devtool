@@ -1,0 +1,7 @@
+
+  <div class="super_navig_head">Excel Export</div>
+  <div class="super_navig_block">
+    <ul>
+        <li><a href="<%=appPath %>/admin/superadmin/excelexport/query.jsp"  ><b>Export table data to MS Excel file</b></a><br/></li>
+    </ul>
+  </div>

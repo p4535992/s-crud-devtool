@@ -1,0 +1,1 @@
+{ "PackageName":"com.$WEBAPP", "ClassName":"LoginStatusFlag" , "FieldItems": [ {"Value":"0","Field":"NOT_LOGGED","Label":"Not Logged"}, {"Value":"1","Field":"LOGGED","Label":"Logged"} ] }

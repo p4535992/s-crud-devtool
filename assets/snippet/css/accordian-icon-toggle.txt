@@ -1,0 +1,42 @@
+      <ul class="nav nav-pills nav-stacked accordian-stacked-menu" id="stacked-menu1">
+			  <li><a class="nav-container" href="<%=appPath %>/user/index.jsp"><i class="fa fa-home fa-lg text-primary"></i>&nbsp;&nbsp;Home</a></li>
+        <li><a class="nav-container" href="<%=appPath %>/user/other/excel-to-mysql-code/index.jsp"><i class="fa fa-file-o text-primary"></i>&nbsp;&nbsp;Get JSP: Excel To MySQL</a></li>
+        <li><a class="nav-container" data-parent="#stacked-menu1" href="#Migrate1" data-toggle="collapse" aria-expanded="false" aria-controls="Migrate1"><i class="fa fa-database text-primary"></i>&nbsp;&nbsp;Migrate: Excel To MySQL<div class="caret-container"><i class="fa fa-plus text-primary"></i></div></a>
+          <ul class="nav nav-pills nav-stacked collapse foriconanim " id="Migrate1">
+                <li><a class="nav-sub-container" href="<%=appPath %>/user/other/excel-mysql-data-migrate/selectfile-create.jsp"><i class="fa fa-hand-o-right text-primary"></i>&nbsp;&nbsp;Insert Data From Excel<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( Create Table )</a></li>
+                <li><a class="nav-sub-container" href="<%=appPath %>/user/other/excel-mysql-data-migrate/selectfile-insert.jsp"><i class="fa fa-hand-o-right text-primary"></i>&nbsp;&nbsp;Insert Data From Excel<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( Existing Table )</a></li>
+                <li><a class="nav-sub-container" href="<%=appPath %>/user/other/excel-mysql-data-migrate/excel-upload-template.jsp"><i class="fa fa-hand-o-right text-primary"></i>&nbsp;&nbsp;Process Excel Upload File</a></li>
+          </ul>
+        </li>
+      </ul>
+
+/*For collapsible sidebar*/
+.nav-container {
+  background-color: #f5f5f5;
+	font-size: 16px;
+}
+
+.caret-container {
+  float: right;
+} 
+
+.nav-sub-container {
+  background-color: #f8f8f8;  
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ul.nav-stacked ul.nav-stacked > li > a {
+  padding-left: 25px;
+}
+
+
+//for sideber icon animation
+function toggleChevron(e) {
+    $(e.target)
+        .prev('a[data-toggle="collapse"]')
+        .find('i.fa')
+        .toggleClass('fa-minus fa-plus');
+}
+$('.foriconanim').on('hide.bs.collapse', toggleChevron);
+$('.foriconanim').on('show.bs.collapse', toggleChevron);

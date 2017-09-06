@@ -1,0 +1,28 @@
+<script type="text/javascript">
+<!--
+$(document).ready(function(){<!-- fa-square-o fa-circle-thin | fa-angle-up fa-arrow-up-->
+      $('body').append('<div class="toTop animated bounce" data-toggle="tooltip" data-placement="auto left" title="Scroll to Top"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x"></i></span></div>');
+    	$(window).scroll(function () {
+			if ($(this).scrollTop() != 0) {
+				$('.toTop').fadeIn();
+			} else {
+				$('.toTop').fadeOut();
+			}
+		}); 
+    $('.toTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+    $('[data-toggle="tooltip"]').tooltip()
+});
+// -->
+</script>
+
+<style type="text/css">
+<!-- 
+/*scroll to Top*/
+
+.toTop{position: fixed;bottom: 5px;right: 5px;cursor: pointer;opacity:0.3;display: none;}.toTop:hover {opacity:1;} 
+ 
+-->
+</style>

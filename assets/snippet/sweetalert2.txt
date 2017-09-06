@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="<%=appPath %>/assets/vendor/sweetalert2/sweetalert2.min.css" />	
+
+<script src="<%=appPath %>/assets/vendor/sweetalert2/sweetalert2.min.js"></script>
+
+swal({
+  title: "Are you sure?",
+  text: "You will not be able to recover this Session!",
+  type: "question",
+  showCancelButton: true,
+  closeOnConfirm: false,
+}).then(function(isConfirm) {
+  if (isConfirm === true) {
+		NavigateTo(url);
+  }
+  else if (isConfirm === false) {
+	  toastr.info('Logout Cancel !');
+	}
+	else {
+	 //swal('Any fool can use a computer');
+	}
+
+});

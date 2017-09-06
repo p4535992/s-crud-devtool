@@ -1,0 +1,20 @@
+USE `$DATABASE`;
+
+/*Table structure for table `$TABLENAME_photograph` */
+
+DROP TABLE IF EXISTS `$TABLENAME_photograph`;
+
+CREATE TABLE `$TABLENAME_photograph` (
+  `RecordID` int(11) NOT NULL AUTO_INCREMENT,
+  `$IDFIELD` int(11) DEFAULT NULL,
+  `FileName` varchar(255) DEFAULT NULL,
+  `Photograph` longblob,
+  `FileSize` int(11) DEFAULT NULL,
+  `MIMEType` varchar(255) DEFAULT NULL,
+  `UpdateDateTime` datetime DEFAULT NULL,
+  PRIMARY KEY (`RecordID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+/*ADD INDEX*/
+ALTER TABLE `$TABLENAME_photograph` ADD INDEX `$IDFIELD` (`$IDFIELD`) ;
+

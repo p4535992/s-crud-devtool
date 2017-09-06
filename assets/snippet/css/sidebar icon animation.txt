@@ -1,0 +1,9 @@
+//for sideber icon animation
+$(".wrenchModal").on('click', 'ul li a.clickable', function (e) {
+    var $this = $(this);
+    if (!$this.hasClass('collapsed')) {
+        $('i', this).toggleClass("fa-plus fa-minus");
+    } else {
+        $this.find('i').removeClass('fa-minus').addClass('fa-plus');
+    }
+});

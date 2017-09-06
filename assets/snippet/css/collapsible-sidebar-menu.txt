@@ -1,0 +1,69 @@
+/*For collapsible sidebar*/
+
+.nav-container {
+  background-color: #f5f5f5;
+	font-size: 16px;
+}
+
+.caret-container {
+  float: right;
+} 
+
+.nav-sub-container {
+  background-color: #f8f8f8;  
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ul.nav-stacked ul.nav-stacked > li > a {
+  padding-left: 25px;
+}
+      <ul class="nav nav-pills nav-stacked">
+			  <li><a class="nav-container" href="<%=appPath %>/user/index.jsp"><i class="fa fa-home fa-lg text-primary"></i>&nbsp;&nbsp;Home</a></li>
+        <li><a class="nav-container" href="<%=appPath %>/user/other/statusflags"><i class="fa fa-home fa-lg text-primary"></i>&nbsp;&nbsp;Status Flag Entities</a></li>
+        <li><a class="nav-container" href="<%=appPath %>/user/other/generic/index.jsp"><i class="fa fa-home fa-lg text-primary"></i>&nbsp;&nbsp;Generic JSP Page</a></li>
+        <li><a class="nav-container" href="<%=appPath %>/user/other/excel-to-mysql-code/index.jsp"><i class="fa fa-home fa-lg text-primary"></i>&nbsp;&nbsp;Get JSP: Excel To MySQL</a></li>
+        <li><a class="nav-container" href="#p1" data-toggle="collapse"><i class="fa fa-home fa-lg text-primary"></i>&nbsp;&nbsp;Migrate: Excel To MySQL<div class="caret-container"><span class="caret"></span></div></a>
+            <ul class="nav nav-pills nav-stacked collapse" id="p1">
+             <li data-toggle="collapse" data-parent="#p1" href="#pv1">
+              <a class="nav-sub-container">Public Views<div class="caret-container"><span class="caret arrow"></span></div></a></li>
+              <ul class="nav nav-pills nav-stacked collapse" id="pv1">
+                <li><a href="#">View One</a></li>
+                <li><a href="#">View Two</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="#">Trash</a></li>
+              </ul>
+            
+            
+            <li data-toggle="collapse" data-parent="#p1" href="#pv2">
+              <a class="nav-sub-container">Your Views<div class="caret-container"><span class="caret arrow"></span></div></a></li>
+              <ul class="nav nav-pills nav-stacked collapse" id="pv2">
+                <li><a href="#">View One</a></li>
+                <li><a href="#">View Two</a></li>
+              </ul>
+            
+
+            <li data-toggle="collapse" data-parent="#p1" href="#pv3">
+              <a class="nav-sub-container">Reports<div class="caret-container"><span class="caret arrow"></span></div></a></li>
+              <ul class="nav nav-pills nav-stacked collapse" id="pv3">
+                <li><a href="#">Report One</a></li>
+                <li><a href="#">Report Two</a></li>
+              </ul>  
+            
+            
+          </ul>
+          
+        </li>
+        <li>
+          <a class="nav-container" data-toggle="collapse" data-parent="#stacked-menu" href="#p2">Process Two<div class="caret-container"><span class="caret arrow"></span></div></a>          
+          <ul class="nav nav-pills nav-stacked collapse" id="p2">
+            <li><a class="nav-sub-container" href="#">View One</a></li>
+            <li><a class="nav-sub-container" href="#">View Two</a></li>
+            <li><a class="nav-sub-container" href="#">View Three</a></li>
+            <li class="nav-divider"></li>
+            <li><a class="nav-sub-container" href="#">Trash</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-container" href="#">Process Three</a></li>
+        <li><a class="nav-container" href="#">Process Four</a></li>
+      </ul>

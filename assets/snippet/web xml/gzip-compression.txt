@@ -1,0 +1,102 @@
+<!-- Enable GZIP compression. -->
+  <filter filter-name="gzip" filter-class="com.caucho.filters.GzipFilter">
+    <init>
+      <use-vary>true</use-vary>
+    </init>
+  </filter>
+  <filter-mapping url-pattern='*' filter-name="gzip" />
+  
+  
+  *******************************************************
+  
+   <filter-mapping filter-name="gzip">
+        <url-pattern>
+            <exclude-pattern>*.pdf</exclude-pattern>
+            <exclude-pattern>*.jsp</exclude-pattern>
+            <exclude-pattern>*.gif</exclude-pattern>
+            <include-pattern>/*</include-pattern>
+        </url-pattern>
+      </filter-mapping>
+	  
+	  
+	  
+*****************************************************
+
+
+<web-app xmlns="http://caucho.com/ns/resin">
+  <filter filter-name="gzip" filter-class="com.caucho.filters.GzipFilter">
+   <init>
+     <use-vary>true</use-vary>
+   </init>
+  </filter>
+
+  <filter-mapping filter-name="gzip">
+    <url-pattern>
+      <exclude-pattern>*.pdf</exclude-pattern>
+      <include-pattern>/*</include-pattern>
+    </url-pattern>
+  </filter-mapping>
+</web-app>	  
+
+
+init directives
+Attribute	Meaning	Default
+allow-content-type	adds a content-type which should be compressed	all
+deny-content-type	adds a content-type which should not be compressed	none
+use-vary	Set the HTTP Vary header for Gzip requests	true
+no-cache	Disable caching of GZip response	false
+embed-error-in-output	Embeds any thrown exceptions in the gzip output	false
+If <allow-content-type> is specified, any unmatched content-type will not be compressed.
+
+***************************************************************
+
+
+<web-app xmlns="<a class="external free" href="http://caucho.com/ns/resin">http://caucho.com/ns/resin</a>">
+  <filter filter-name="gzip" filter-class="com.caucho.filters.GzipFilter">
+   <init>
+     <use-vary>true</use-vary>
+   </init>
+  </filter>
+ 
+  <filter-mapping filter-name="gzip">
+    <url-pattern>
+      <exclude-pattern>*.png</exclude-pattern>
+      <include-pattern>/*</include-pattern>
+    </url-pattern>
+  </filter-mapping>
+</web-app>
+
+
+
+////
+
+
+<resin xmlns="http://caucho.com/ns/resin">
+  <logger name="com.caucho.server.cache" level="fine"/>       #Debugging caching
+  ...
+  <host id="" root-directory="D:\works\deploy\mobile">
+      <web-app id="/" root-directory=".">
+        <session-config>
+          <reuse-session-id>true</reuse-session-id>
+          <enable-cookies>false</enable-cookies>
+          <enable-url-rewriting>true</enable-url-rewriting> 
+        </session-config>
+        <cache-mapping url-pattern="*.gif" max-age="24h"/>
+        <cache-mapping url-pattern="*.jpg" max-age="24h"/>
+        <cache-mapping url-pattern="*.png" max-age="24h"/>
+        <cache-mapping url-pattern="*.css" max-age="1h"/>
+        <filter filter-name="gzip" filter-class="com.caucho.filters.GzipFilter">
+          <init>
+            <use-vary>true</use-vary>
+          </init>
+        </filter>
+        <filter-mapping filter-name="gzip">
+          <url-pattern>
+            <exclude-pattern>*.png,*.jpg,*.ico,*.gif,*.css</exclude-pattern>
+            <include-pattern>/*</include-pattern>
+          </url-pattern>
+        </filter-mapping>
+      </web-app>
+  </host>
+  
+  

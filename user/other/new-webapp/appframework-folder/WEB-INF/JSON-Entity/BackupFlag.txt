@@ -1,0 +1,1 @@
+{ "PackageName":"com.$WEBAPP", "ClassName":"BackupFlag" , "FieldItems": [ {"Field":"UNKNOWN","Value":"0","Label":"Unknown"}, {"Field":"CREATE","Value":"1","Label":"Create"}, {"Field":"DELETE","Value":"2","Label":"Delete"} ] }

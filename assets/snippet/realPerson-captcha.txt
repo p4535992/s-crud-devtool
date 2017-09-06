@@ -1,0 +1,36 @@
+<div class="form-group">
+<input type="text" id="captcha" name="captcha" class="form-control" placeholder="Retype Above Code" style="text-transform: uppercase">
+</div>
+
+
+/// include in jsp:include page
+<script>
+$(function() {
+	$('#captcha').realperson({regenerate: 'Try another', chars: $.realperson.alphanumeric, length: 6});
+});
+</script>
+
+<jsp:include page="/assets/include-page/js/realperson-captcha-js.jsp" flush="true" />
+
+    $('#loginForm').formValidation({
+        framework: 'bootstrap',
+        fields: {
+         captcha: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Code required'
+                     },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9]*$/i,
+                        message: 'The code can consist of alphanumeric characters only'
+                    },								 
+                    remote: {
+                        message: 'The Code is not correct',
+                        url: '<%=appPath %>/backend/validation/realperson_captchavalidation.jsp',
+			data: {captchaHash: $('#captcha').realperson('getHash')},
+                        type: 'POST'
+                     } 	
+                 }
+            }
+        }
+    });

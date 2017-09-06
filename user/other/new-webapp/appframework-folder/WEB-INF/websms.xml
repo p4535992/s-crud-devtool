@@ -1,0 +1,20 @@
+ <web-app xmlns="http://caucho.com/ns/resin">  
+   <!--   
+      <context-param>
+          <param-name>DISPATCH-INTERVAL</param-name>
+          <param-value>1</param-value>
+      </context-param> 
+   -->
+     <context-param>
+         <param-name>WEBSMS-DATASOURCE</param-name>
+         <param-value>jdbc/$DATABASE</param-value>
+     </context-param> 
+   
+     <listener>
+          <listener-class>com.$WEBAPP.appsms.SMSService</listener-class>
+     </listener>
+
+ </web-app>
+
+
+        

@@ -1,0 +1,1 @@
+{ "PackageName":"com.$WEBAPP", "ClassName":"LoginRole" , "FieldItems": [ {"Field":"Administrator","Value":"1","Label":"Administrator"} ] }

@@ -1,0 +1,158 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app xmlns:resin="http://caucho.com/ns/resin/core" >
+
+ <class-loader>
+      <compiling-loader path="WEB-INF/classes" source="WEB-INF/src" />
+      <library-loader path="WEB-INF/lib"/>      
+ </class-loader>	      
+ 	                    
+	<cache-mapping url-pattern='*.gif' expires='1h'/>    
+    <cache-mapping url-pattern='*.jpg' expires='1h'/>
+    <cache-mapping url-pattern='*.png' expires='1h'/> 
+	
+  <multipart-form upload-max= '-1'/>                 
+ <session-config>                
+     <session-timeout>300</session-timeout>  
+     <session-max>4096</session-max>    
+ </session-config>                      
+    
+<!--  Direcotry servlet enabled temporarily   -->
+  <servlet servlet-name="directory" servlet-class="com.caucho.servlets.DirectoryServlet"> 
+	<init><enable>true</enable></init>    
+  </servlet>
+
+    
+<error-page>
+    <!-- Missing resource -->
+    <error-code>404</error-code>
+    <location>/Error-404.jsp</location>
+</error-page>
+<!--
+<error-page>
+    Uncaught exception
+    <error-code>500</error-code>   
+    <location>/Error-500.jsp</location>
+</error-page>
+ -->
+
+    <servlet>       
+       <servlet-name>getjsp</servlet-name>
+       <servlet-class>com.beanwiz.GetJSP</servlet-class>
+    </servlet>      
+    <servlet-mapping url-pattern="/getjsp/*" servlet-name="getjsp"/>
+	 <servlet>  
+       <servlet-name>makebean</servlet-name> 
+       <servlet-class>com.beanwiz.MakeBean</servlet-class>         
+    </servlet>
+    <servlet-mapping url-pattern="/makebean/*" servlet-name="makebean"/>
+
+    <servlet>    
+       <servlet-name>tablefields</servlet-name>
+       <servlet-class>com.beanwiz.TableFields</servlet-class>
+    </servlet>
+    <servlet-mapping url-pattern="/tablefields/*" servlet-name="tablefields"/>      
+	    
+	
+	<servlet servlet-name='excel_from_sql' servlet-class='com.beanwiz.sqltoexcel' ></servlet>		 
+	<servlet-mapping url-pattern='/getexcelfromquery/*' servlet-name='excel_from_sql'/>
+
+  <filter filter-name="gzip" filter-class="com.caucho.filters.GzipFilter">
+   <init>
+     <use-vary>true</use-vary>
+   </init>
+  </filter>
+
+  <filter-mapping filter-name="gzip">
+    <url-pattern>   
+      <!-- <exclude-pattern>*.pdf</exclude-pattern> --> 
+      <include-pattern>/*</include-pattern>
+    </url-pattern>       
+  </filter-mapping>
+    
+
+    <filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    </filter>
+    <filter-mapping>    
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>	
+  
+<!-- 
+	<database>
+  <jndi-name>jdbc/postgress</jndi-name>
+     <driver>
+          < ! - - <type>org.postgresql.ds.PGConnectionPoolDataSource</type> - - >
+		    <type>org.postgresql.Driver</type>  
+        <url>jdbc:postgresql://127.0.0.1:5432/testme</url>
+        <user>postgres</user>
+        <password>javageek</password>
+     </driver>
+  </database>
+   	
+  <database>
+    <jndi-name>jdbc/postgres</jndi-name>
+    <driver>
+       <type>org.postgresql.Driver</type>
+       <url>jdbc:postgresql://localhost:5432/javaweb</url>
+       <user>javaweb</user>
+       <password>javaweb</password>
+	  </driver>
+  </database>   
+ 
+  <database>
+    <jndi-name>jdbc/oracle</jndi-name>
+    <driver>
+       <type>oracle.jdbc.pool.OracleConnectionPoolDataSource</type>
+       <url>jdbc:oracle:thin:@localhost:1521:EX</url>
+       <user>javaweb</user>
+       <password>javaweb</password>
+    </driver>
+  </database> 
+
+  <database>
+    <jndi-name>jdbc/schoolquiz</jndi-name>
+    <driver>
+       <type>org.h2.Driver</type>
+         <url>jdbc:h2:D:/Software-Development/MCQTools/MCQMAKER-PLUS/quizmaker/WEB-INF/db/quizmaker;IGNORECASE=TRUE</url>
+         <user>SA</user>
+       <password></password>
+	  </driver>
+  </database>  
+--> 	
+	<database>
+     <jndi-name>jdbc/$</jndi-name>   
+     <driver>
+        <type>com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource</type>
+        <url>jdbc:mysql://localhost:3306/</url>
+        <user>root</user>
+        <password></password>
+	   </driver>
+	   <prepared-statement-cache-size>8</prepared-statement-cache-size>
+     <max-connections>20</max-connections>
+     <max-idle-time>30s</max-idle-time>
+  </database> 
+
+	<!-- Customer specific database configurations in seperate xml file -->
+	<resin:import path="WEB-INF/database.xml" />
+	
+	<!-- Login configuration in seperate xml file -->
+	<resin:import path="WEB-INF/login-config.xml" />
+	
+	
+	
+  <context-param>
+      <param-name>WEBAPP-CONFIG-FILE</param-name>
+      <param-value>/WEB-INF/webapp.config</param-value>
+  </context-param> 
+  
+  
+  
+ <listener>
+    <listener-class>com.beanwiz.BeanwizContextListener</listener-class>
+ </listener>
+ 
+</web-app>

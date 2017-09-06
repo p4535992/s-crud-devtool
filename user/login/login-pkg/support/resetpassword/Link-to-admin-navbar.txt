@@ -1,0 +1,1 @@
+<li class="list-group-item"><i class="icon fa fa-anchor iccolor" aria-hidden="true"></i>&nbsp;<a href="<%=appPath %>/admin/superadmin/resetpassword/resetpasswordof$TABLENAME.jsp">$CTABLENAME</a></li>

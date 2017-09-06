@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app xmlns="http://caucho.com/ns/resin" xmlns:resin="http://caucho.com/ns/resin/core" >
+ <character-encoding>utf8</character-encoding>
+ <class-loader>
+      <compiling-loader path="WEB-INF/classes" source="WEB-INF/src" />
+      <library-loader path="WEB-INF/lib"/> 
+ </class-loader>	 
+ <multipart-form upload-max= '-1'/> 
+ <session-config>
+     <session-timeout>120</session-timeout>
+     <session-max>4096</session-max> 
+ </session-config>    	            
+              
+	  								
+ <servlet-mapping url-pattern='/servlet/*' servlet-name='invoker'/>
+ <servlet servlet-name="directory" servlet-class="com.caucho.servlets.DirectoryServlet"> 
+  <init><enable>false</enable></init>    
+ </servlet>    
+    
+ <error-page>
+    <!-- Missing resource -->
+    <error-code>404</error-code>
+    <location>/Error-404.jsp</location>
+ </error-page>
+
+  <filter filter-name="gzip" filter-class="com.caucho.filters.GzipFilter">
+   <init>
+     <use-vary>true</use-vary>
+   </init>
+  </filter>
+
+  <filter-mapping filter-name="gzip">
+    <url-pattern>   
+      <!-- <exclude-pattern>*.pdf</exclude-pattern> --> 
+      <include-pattern>/*</include-pattern>
+    </url-pattern>       
+  </filter-mapping>
+  
+<!-- 
+ Register a context listener if something has to be done on application start-up
+ --> 
+ <listener>
+    <listener-class>com.$WEBAPP.$WEBAPPContextListener</listener-class>
+ </listener>
+
+  <context-param>
+      <param-name>WEBAPP-CONFIG-FILE</param-name>
+      <param-value>/WEB-INF/webapp.config</param-value>
+  </context-param> 
+  
+    <!-- Drop down list related import web.xml -->
+	<resin:import path="WEB-INF/drop-down.xml" /> 
+    <!-- Login related import in web.xml -->
+	<resin:import path="WEB-INF/login-roles.xml" />
+    <!-- Login-photo related import in web.xml -->
+	<resin:import path="WEB-INF/login-photo.xml" />
+    <!-- Database related import in web.xml -->
+    <resin:import path="WEB-INF/database.xml" />
+    <!-- SMS Related import in web.xml -->
+    <resin:import path="WEB-INF/websms.xml" />
+    <!-- MAIL Related import in web.xml -->
+    <resin:import path="WEB-INF/webmail.xml" />
+ 
+
+</web-app>

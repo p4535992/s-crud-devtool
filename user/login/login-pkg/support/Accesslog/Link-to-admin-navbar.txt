@@ -1,0 +1,1 @@
+<li class="list-group-item"><i class="icon fa fa-anchor iccolor" aria-hidden="true"></i>&nbsp;<a href="<%=appPath %>/admin/superadmin/accesslog/accesslogof$TABLENAME.jsp">Accesslog of $CTABLENAME</a></li>

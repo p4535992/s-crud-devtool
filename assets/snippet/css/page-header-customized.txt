@@ -1,0 +1,39 @@
+    <div class="row page-header1">
+    	<div class="col-md-6 col-xs-12 ">
+        <h2 class="page-title1"><i class="fa fa-send-o"></i>&nbsp;&nbsp;Party Begin...</h2>
+      	<p class="page-description hidden-xs">Page Description Here.</p>
+	    </div>
+			<div class="col-md-6 col-xs-12 page-header-actions text-right">
+            <ol class="breadcrumb">
+               <li><a href="../index-2.html">Home</a></li>
+               <li><a href="javascript:void(0)">Layouts</a></li>
+               <li class="active">Headers</li>
+            </ol>
+	    </div>
+    </div>
+
+.page-header1 .page-description {
+    color: #a3afb7;
+		padding-left: 50px;
+}
+ 
+.page-header1 .breadcrumb {
+    background-color: transparent;
+    border-radius: 3px;
+    list-style: outside none none;
+    margin: 10px 0;
+    padding: 2px 15px; 
+}
+.page-header1 p {
+    margin: 2px 0 2px;
+}
+.page-header1 h1, h2, h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.page-header1 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 10px;
+    position: relative;
+}

@@ -1,0 +1,54 @@
+------------------------------------------------
+
+MySQL:   
+Driver Name: MySQL-AB JDBC Driver 
+URL: jdbc:mysql://localhost:3306/<database>
+Driver Class: com.mysql.jdbc.Driver
+Pool Data Source: com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource
+
+------------------------------------------------
+
+Postgres:  
+Driver Name: PostgreSQL Native Driver 
+URL  "jdbc:postgresql://localhost:5432/<database>";
+Driver Class: org.postgresql.Driver
+Pool Data Source:  org.postgresql.ds.PGPoolingDataSource
+
+------------------------------------------------
+
+IBM DB2: 
+Driver Name: IBM Data Server Driver for JDBC and SQLJ
+URL: jdbc:db2//server:port/<database>  // port = 50000 for windows
+Driver Class: com.ibm.db2.jcc.DB2Driver
+Pool Data Source:
+
+------------------------------------------------
+
+MS SQL Server: 
+Driver Name: Microsoft SQL Server JDBC Driver 2.0 
+URL:"jdbc:sqlserver://localhost:1433;database=AdventureWorks;integratedSecurity=true;"
+Driver Class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+Pool Data Source: 
+com.microsoft.sqlserver.jdbc.SQLServerDataSource
+com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource
+------------------------------------------------
+
+Oracle: 
+Driver Name: Oracle JDBC driver
+URL: jdbc:oracle:thin:@192.168.21.128:1521:<database>
+Driver Class: oracle.jdbc.driver.OracleDriver
+Pool Data Source: oracle.jdbc.pool.OracleConnectionPoolDataSource
+
+------------------------------------------------
+H2 Database :   
+Driver Name: H2 JDBC Driver
+URL: jdbc:h2:< filename ? C:\path\datafile > OR jdbc:h2:tcp://localhost//<path>
+Driver Class:  org.h2.Driver
+Pool Data Source:  org.h2.jdbcx.JdbcDataSource
+------------------------------------------------
+SQLite:  
+Driver Name: SQLite/JDBC
+URL: jdbc:sqlite:< filename ? C:\path\file.ext >
+Driver Class:  org.sqlite.JDBC
+Pool Data Source: org.sqlite.JDBC
+------------------------------------------------

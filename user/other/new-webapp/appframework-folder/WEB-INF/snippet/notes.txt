@@ -1,0 +1,104 @@
+when target option
+------------------
+function fetch_Course(InstituteID)
+{
+	     $.ajax({ 
+				url: "<%=appPath %>/include-page/ajaxpage/get_course.jsp?InstituteID="+InstituteID+" ",
+				type: "GET",
+				data: {},
+        success: function (response) {
+            $('#CourseID').append(response);
+						$('#CourseID').selectpicker('refresh');
+				},
+        error: function () {
+            $('#CourseID').html('Record Not Found !');
+        }
+    });
+}
+
+*************************************************************************************************************************
+
+when dbdroplist onchange
+
+<%
+ String Whrclus = "WHERE `InstituteID`="+ClsBn.InstituteID+" AND "+UserAuthorization.getAdminCourseInClause(SiBn.AdminID,ClsBn.InstituteID,nModuleID)+" " ;
+ String Plugin = "onchange='getSem("+ClsBn.InstituteID+",this.value,"+nModuleID+",ChngAct)' data-plugin='selectpicker' data-container='body' data-live-search='false' ";
+%>
+    <div class="form-group col-sm-6">
+	     <label for="CourseID" class="control-label" ><%=FieldLabel[ClsBn_CourseID] %></label>
+			  <jsp:include page ="/courselist/" >
+			     <jsp:param name="ElementName" value="CourseID" />
+					 <jsp:param name="ElementID" value="CourseID" />
+					 <jsp:param name="Select" value="<%=BaBn.CourseID %>" />
+					 <jsp:param name="All" value="false" />
+					 <jsp:param name="None" value="false" />
+					 <jsp:param name="WhereClause" value="<%=Whrclus %>" />
+					 <jsp:param name="OrderBy" value="" />
+					 <jsp:param name="ClassName" value="form-control show-tick" />
+					 <jsp:param name="Plugin" value="<%=Plugin %>" />
+					 <jsp:param name="Multiple" value="false" />
+				</jsp:include>
+	  </div>
+
+
+***************************************************************************************************************
+select multiple get values at onchange event
+
+<select name="myarray[]" id="myarray" class="select2-select req" style="width: 90%;" onChange="getSelectedOptions(this)" multiple>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+
+function getSelectedOptions(sel) {
+  var opts = [],
+    opt;
+  var len = len = sel.options.length;
+  for (var i = 0; i < len; i++) {
+    opt = sel.options[i];
+
+    if (opt.selected) {
+      opts.push(opt);
+      alert(opt.value);
+    }
+  }
+
+  return opts;
+}
+
+
+
+var texts = [];
+var values = [];
+var sel = document.getElementById('selectBox');
+for (var i=0, n=sel.options.length;i<n;i++) {
+  if (sel.options[i].text) texts.push(sel.options[i].text);
+  if (sel.options[i].value) values.push(sel.options[i].value);
+}
+alert(texts.join(","));
+alert(values.join(","));
+
+
+function getSelectedOptions(sel) {
+  var opts = [],opt,joinedstr;
+	
+  var len = len = sel.options.length;
+  for (var i = 0; i < len; i++) 
+	{
+    opt = sel.options[i];
+
+    if (opt.selected) {
+		  opts.push(opt.value);
+			//joinedstr = opts.join(','); 
+    }
+  }
+	
+ 	try
+  {
+  	fetch_Lecture_Topic('<%=InstituteID %>','<%=CourseID %>','<%=SemesterID %>','<%=SubjectID %>',opts)
+  }
+  catch(err){}	
+}
+
+
+*****************************************************************************************************************

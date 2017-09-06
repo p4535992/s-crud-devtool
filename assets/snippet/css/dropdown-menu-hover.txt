@@ -1,0 +1,88 @@
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
+************************************************** 
+ $('.dropdown').hover(function(){ 
+  $('.dropdown-toggle', this).trigger('click'); 
+});
+
+fails if you have more than one dropdown level
+
+Not Working with parent link – pio 
+******************************************************
+ 
+ $(document).ready(function(){
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+    });  
+});
+
+********************************************************
+
+$(function(){
+    $('.dropdown').hover(function() {
+        $(this).addClass('open');
+    },
+    function() {
+        $(this).removeClass('open');
+    });
+});
+
+********************************************************
+
+$('.dropdown').mouseenter(function(){
+    if(!$('.navbar-toggle').is(':visible')) { // disable for mobile view
+        if(!$(this).hasClass('open')) { // Keeps it open when hover it again
+            $('.dropdown-toggle', this).trigger('click');
+        }
+    }
+});
+********************************************************
+
+<a class="dropdown-toggle" data-toggle="dropdown">Show menu</a>
+
+<ul class="dropdown-menu" role="menu">
+    <li>Link 1</li>
+    <li>Link 2</li> 
+    <li>Link 3</li>                                             
+</ul>
+Normally it works on click event, and you want it work on hover event. This is very simple, just use this javascript/jquery code:
+
+$(document).ready(function () {
+    $('.dropdown-toggle').mouseover(function() {
+        $('.dropdown-menu').show();
+    })
+
+    $('.dropdown-toggle').mouseout(function() {
+        t = setTimeout(function() {
+            $('.dropdown-menu').hide();
+        }, 100);
+
+        $('.dropdown-menu').on('mouseenter', function() {
+            $('.dropdown-menu').show();
+            clearTimeout(t);
+        }).on('mouseleave', function() {
+            $('.dropdown-menu').hide();
+        })
+    })
+})
+
+*********************************************************
+
+$(document).ready(function () {
+    $('.navbar-default .navbar-nav > li.dropdown').hover(function () {
+        $('ul.dropdown-menu', this).stop(true, true).slideDown('fast');
+        $(this).addClass('open');
+    }, function () {
+        $('ul.dropdown-menu', this).stop(true, true).slideUp('fast');
+        $(this).removeClass('open');
+    });
+});
+
+Nice but does not support sub menus
+
+********************************************************
+

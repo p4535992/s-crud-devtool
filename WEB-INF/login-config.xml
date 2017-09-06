@@ -1,0 +1,30 @@
+<web-app xmlns="http://caucho.com/ns/resin">
+    <context-param>
+        <param-name>XML-AUTH-FILE</param-name>
+        <param-value>/WEB-INF/users.xml</param-value>
+    </context-param> 
+
+    <servlet servlet-name="UserLoginServlet" servlet-class="com.webapp.login.LoginServlet" >
+        <init-param LOGIN-HOME="/user/index.jsp" />
+        <init-param LOGIN-ERROR="/loginform.jsp" />
+        <init-param LOGIN-OBJECT-CLASS="com.beanwiz.LoggedUser" />
+        <init-param LOGIN-OBJECT-ID="theWizardUser"  />
+        <init-param LOGIN-ROLE="WizardUser"  />
+        <init-param SQL-ENGINE="MYSQL"  />
+
+    </servlet>
+    <servlet-mapping url-pattern="*/user_login_check/*" servlet-name="UserLoginServlet"/>
+
+    <filter filter-name="UserLoginFilter" filter-class="com.webapp.login.LoginFilter" >
+         <init-param LOGIN-HOME="/user/index.jsp"/>
+         <init-param LOGIN-FORM="/loginform.jsp"/>
+         <init-param LOGIN-OBJECT-ID="theWizardUser" />
+         <init-param LOGIN-ROLE="WizardUser"  />
+    </filter>
+    <filter-mapping url-pattern="/user/*" filter-name="UserLoginFilter"/> 
+
+ 
+ 
+</web-app>
+
+ 

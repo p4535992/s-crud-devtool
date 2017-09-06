@@ -1,0 +1,41 @@
+    <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6">
+			     <label class="control-label" id="MathcaptchaOperation"></label>
+      </div>
+      <div class="col-xs-6">
+            <input type="text" class="form-control" name="Mathcaptcha" placeholder="Enter Sum value"/>
+      </div>
+    </div>
+    </div>
+
+
+$(document).ready(function() {
+
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function generateCaptcha() {
+        $('#MathcaptchaOperation').html([randomNumber(1, 100), '+', randomNumber(1, 200),  '='].join(' '));
+    }
+    generateCaptcha();
+
+    $('#loginForm').formValidation({
+        framework: 'bootstrap',
+        fields: {
+                Mathcaptcha: {
+                    validators: {
+                        callback: {
+                            message: 'Wrong answer',
+                            callback: function (value, validator, $field) {
+                                // Determine the numbers which are generated in captchaOperation
+                                var items = $('#MathcaptchaOperation').html().split(' '),
+                                    sum   = parseInt(items[0]) + parseInt(items[2]);
+                                return value == sum;
+                            }
+                        }
+                    }
+                }
+        }
+    });

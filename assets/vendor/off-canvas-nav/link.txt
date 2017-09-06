@@ -1,0 +1,3 @@
+<link rel="stylesheet" href="<%=appPath %>/assets/vendor/off-canvas-nav/bootstrap.offcanvas.css" />	
+
+<script src="<%=appPath %>/assets/vendor/off-canvas-nav/bootstrap.offcanvas.min.js"></script>

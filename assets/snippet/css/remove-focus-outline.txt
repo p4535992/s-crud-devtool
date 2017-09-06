@@ -1,0 +1,43 @@
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: none;
+}
+
+To style the border rather than remove it completely, a more accessible solution, 
+you can use more standard pseudo-classes such as :focus and apply some normal CSS rules:
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 1px dotted transparent;
+}
+
+button:focus::-moz-focus-inner,
+input[type="reset"]:focus::-moz-focus-inner,
+input[type="button"]:focus::-moz-focus-inner,
+input[type="submit"]:focus::-moz-focus-inner,
+input[type="file"] > input[type="button"]:focus::-moz-focus-inner {
+    padding: 3px;
+    border-color: #F3F3F3;
+}
+
+
+input[type="text"], input[type="text"]:focus{
+            outline: 0;
+            border:none;
+            box-shadow:none;
+
+    }
+	
+	
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}	

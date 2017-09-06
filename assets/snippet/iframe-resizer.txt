@@ -1,0 +1,9 @@
+<iframe src="???" frameborder="0" width="100%" scrolling="no" class="iFrame_Resize" ></iframe>
+
+<!-- iframeResizer.min.js on host page -->
+<jsp:include page="/assets/include-page/js/iframe-resizer/iframeResizer-js.jsp" flush="true" />
+$('.iFrame_Resize').iFrameResize( [{}] );
+
+
+<!-- iframeResizer.contentWindow.min.js to be loaded into the target frame -->
+<jsp:include page="/assets/include-page/js/iframe-resizer/iframeResizer-contentWindow-js.jsp" flush="true" />

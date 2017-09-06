@@ -1,0 +1,30 @@
+<p>Hi There, error code is <%=response.getStatus() %></p>
+
+The following parameters will be set by the container when request is forwarded to the error page.
+
+     javax.servlet.error.status_code    java.lang.Integer
+     javax.servlet.error.exception_type java.lang.Class
+     javax.servlet.error.message        java.lang.String
+     javax.servlet.error.exception      java.lang.Throwable
+     javax.servlet.error.request_uri    java.lang.String
+     javax.servlet.error.servlet_name   java.lang.String
+
+In your error JSP do this,
+
+<% 
+
+String statusCocde = request.getAttribute("javax.servlet.error.status_code").toString();
+String exceptionType = request.getAttribute("javax.servlet.error.exception_type").toString();
+String errorMsg = request.getAttribute("javax.servlet.error.message").toString().replace("\r\n", "\r\n<br />");
+
+String exception1 = request.getAttribute("javax.servlet.error.exception").toString();
+String request_uri = request.getAttribute("javax.servlet.error.request_uri").toString();
+//String servlet_name = request.getAttribute("javax.servlet.error.servlet_name").toString();
+
+%>
+<p><%=statusCocde %></p>
+<p><%=exceptionType %></p> 
+<p><%=errorMsg %></p> 
+<p><%=exception1 %></p>
+<p><%=request_uri %></p>
+<p><%=request.getAttribute("javax.servlet.error.servlet_name") %></p> 

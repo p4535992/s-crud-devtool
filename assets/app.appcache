@@ -1,0 +1,28 @@
+CACHE MANIFEST
+# Generated: 29-03-2016 19:29:54
+
+CACHE:
+#Font - Css
+/bb/assets/css/font/font-awesome-4.5.0/css/font-awesome.min.css
+
+#Css
+/bb/assets/css/bootstrap/css/bootstrap.min.css
+/bb/assets/css/common/app.css
+/bb/assets/css/common/buttons.css
+/bb/assets/vendor/formvalidation/formValidation.min.css
+/bb/assets/vendor/pace/themes/blue/pace-theme-minimal.css
+/bb/assets/vendor/Scroll-To-Top/scrollToTop.css
+/bb/assets/vendor/Scroll-To-Top/easing.css
+
+#js
+/bb/assets/js/modernizr/modernizr-2.8.3-respond-1.4.2.min.js
+/bb/assets/js/jquery/jquery-1.12.1.min.js
+/bb/assets/js/bootstrap/bootstrap.min.js
+#/bb/assets/js/cookieconsent/cookieconsent.min.js
+/bb/assets/vendor/formvalidation/formValidation.min.js
+/bb/assets/vendor/formvalidation/formvalidation_bootstrap.min.js
+/bb/assets/vendor/pace/pace.min.js
+/bb/assets/vendor/Scroll-To-Top/jquery-scrollToTop.min.js
+
+NETWORK:
+*

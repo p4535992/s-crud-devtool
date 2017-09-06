@@ -1,0 +1,61 @@
+body{font-size: 10px;}
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+.row-fluid {
+    word-wrap: break-word;
+}
+
+
+<div class="container-fluid">
+    <div class="div-1">
+        <div class="page-header">
+             <h1>Page heading <small>Subheading</small>
+      </h1>
+
+        </div>
+    </div>
+    <div class="row-fluid"> <span class="span3">
+          <h1 class="heading">Headingaaaaa aaaaaaaaaaaaaaaaaaaaa</h1>
+          <p>Lorem Ipsum...aaaaaaaaaaaah</p>
+        </span>
+ <span class="span6">
+          <h1 class="heading">Headingaaaaa aaaaaaaaaaaaaaaaaaaaa</h1>
+          <p>Lorem Ipsum...</p>
+        </span>
+ <span class="span3">
+          <h1 class="heading">Heading Like This</h1>
+          <p>Lorem Ipsum...</p>
+        </span>
+
+    </div>
+</div>

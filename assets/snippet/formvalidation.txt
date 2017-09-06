@@ -1,0 +1,100 @@
+<!-- un comment if you want to clearing field with click on icon and enable javascript part too
+<style type="text/css">
+form .form-control-feedback {
+    pointer-events: auto;
+}
+form .form-control-feedback:hover {
+    cursor: pointer;
+}
+</style> 
+-->
+
+<script>
+$(document).ready(function() {
+//for clearing field with icon click
+    $('#loginForm')
+        .on('init.field.fv', function(e, data) {
+            var $parent = data.element.parents('.form-group'),
+                $icon   = $parent.find('.form-control-feedback[data-fv-icon-for="' + data.field + '"]');
+
+            $icon.on('click.clearing', function() {
+                if ($icon.hasClass('glyphicon-remove')) {
+                    data.fv.resetField(data.element);
+                }
+            });
+        })
+//---------------------------------------		
+.formValidation({
+        framework: 'bootstrap',
+         // for icon
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        //----------------------------------
+        fields: {
+				
+            LoginID: {
+						    icon: true,
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required'
+                    }
+                }
+            },
+            Password: {
+						    icon: true,
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required'
+                    }
+                }
+            }
+        }
+    });
+
+// for enable submit button whole time		
+$('form').on('err.field.fv', function(e, data) { data.fv.disableSubmitButtons(false);})
+         .on('success.field.fv', function(e, data) {data.fv.disableSubmitButtons(false);});
+//-------------------------------------------
+				 
+});
+
+//execute code after form reset
+$("input[type='reset']").on("click", function(event){
+
+     alert('before reset: ' + $("input[type='text']").val());
+    
+     event.preventDefault();
+     // stops the form from resetting after this function
+
+     $(this).closest('form').get(0).reset();
+     // resets the form before continuing the function
+
+     alert('after reset: ' + $("input[type='text']").val());
+     // executes after the form has been reset
+
+ });
+
+
+//second method ---------
+
+$("input:reset").click(function() {       // apply to reset button's click event
+        this.form.reset();                    // reset the form
+        window.alert($("input:text").val());  // call your function after the reset      
+        return false;                         // prevent reset button from resetting again
+    });
+
+
+//for reset and hard reset
+$('#resetButton').on('click', function(e) {
+        $('form').data('formValidation').resetForm(false);
+                 })
+            		 .on('dblclick', function(e) {
+                    $('form').data('formValidation').resetForm(true);
+                 });
+
+		
+		
+</script>

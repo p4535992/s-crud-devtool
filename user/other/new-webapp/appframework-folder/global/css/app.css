@@ -1,0 +1,109 @@
+/*============Must - Not touch it withot knowing about css==========*/
+button, input, select, textarea {font-family: Tahoma, Geneva, sans-serif;}
+.form-horizontal .form-group {margin-bottom: 10px;}
+.form-group.req .control-label:after {content:" *";color:red;}
+.page-content {padding: 18px;}
+.row-fluid-text {word-wrap: break-word;}
+.hr-res{margin-bottom: 12px;margin-top: 0;}
+.page-title-res{font-size: 24px;padding: 5px 0;margin-bottom: 0;margin-top: 0;}
+.breadcrumb-res {float: right;margin-bottom: 0;padding: 12px 10px 0;}
+.breadcrumb > li + li::before {content: "> ";padding: 0 2px;}
+.page-title-action{padding: 15px 30px 10px;}
+input[readonly].readonlybg {background-color: #fff;}
+.fixed-add-btn-circle {bottom: 10%;position: fixed;right: 5%;vertical-align: middle;z-index: 1000;}
+.table-curved{border-collapse:separate}.table-curved{border:solid #e4eaec 1px;border-width:0 1px 1px 0;border-radius:6px;border-left:0px}.table-curved td,.table-curved th{border-left:1px solid #ccc;border-top:1px solid #ccc}.table-curved th{border-top:none}.table-curved th:first-child{border-radius:6px 0 0 0}.table-curved th:last-child{border-radius:0 6px 0 0}.table-curved th:only-child{border-radius:6px 6px 0 0}.table-curved tr:last-child td:first-child{border-left:1px solid #e4eaec;border-radius:6px 0 0 6px}.table-curved tr:last-child td:last-child{border-radius:0 6px 6px 0}
+.table-responsive-overflow {overflow-x: visible !important;overflow-y: visible !important;}
+.tab-table tr:first-child td{border: none;}
+.Rslt-Act-tbl{margin-bottom: 10px;}
+.Rslt-Act-nav-tbl{margin-bottom: 10px;padding: 0;}.Rslt-Act-nav-tbl a {text-decoration: none;} 
+.Rslt-Act-nav-tbl > tbody > tr > td, .Rslt-Act-nav-tbl > tbody > tr > th, .Rslt-Act-nav-tbl > tfoot > tr > td, .Rslt-Act-nav-tbl > tfoot > tr > th, .Rslt-Act-nav-tbl > thead > tr > td, .Rslt-Act-nav-tbl > thead > tr > th {vertical-align: middle;}
+.appblockquote {padding: 10px 25px;font-size: 16px;background-color: #fff;margin: 0 0 10px;}
+.radio-custom label::before {border: 1px solid #9e9e9e;}
+
+.panel-form-box-header:before,
+.panel-form-box-body:before,
+.panel-form-box-footer:before,
+.panel-form-box-header:after,
+.panel-form-box-body:after,
+.panel-form-box-footer:after {
+  content: " ";
+  display: table;
+}
+.panel-form-box-header:after,
+.panel-form-box-body:after,
+.panel-form-box-footer:after {
+  clear: both;
+}
+.panel-form-box {
+  border-top: 3px solid #d2d6de;
+	margin-top: 10px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+.panel-form-box.panel-form-box-primary {
+  border-top-color: #62a8ea;/*#3c8dbc*/
+}
+.panel-form-box.panel-form-box-info {
+  border-top-color: #57c7d4;
+}
+.panel-form-box.panel-form-box-danger {
+  border-top-color: #f96868;
+}
+.panel-form-box.panel-form-box-warning {
+  border-top-color: #f2a654;
+}
+.panel-form-box.panel-form-box-success {
+  border-top-color: #46be8a;
+}
+.panel-form-box.panel-form-box-default {
+  border-top-color: #e4eaec;
+}  
+.panel-form-box-header {
+  color: #444;
+  display: block;
+  padding-top: 5px;
+	padding-bottom: 5px;
+  position: relative;
+}
+.panel-form-box-header.panel-form-box-with-border {
+  border-bottom: 1px solid #f4f4f4;
+}
+.panel-form-box-body {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding-top: 12px;
+  padding-bottom: 16px;
+}
+.panel-form-box-header + .panel-form-box-body {
+  padding-top: 12px;
+}
+.panel-form-box-footer {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top: 1px solid #f4f4f4;
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+@media (max-width:480px){
+.form-group {margin-bottom: 10px;}	
+.page-title-res{font-size: 18px;padding: 0 0 7px;}
+.breadcrumb-res{float: none;padding: 3px 3px;background: #e9edf5;font-size: 12px;}
+.page-title-action{padding: 15px 15px 10px;font-size: 16px;}
+.fixed-add-btn-circle {font-size: 18px;height: 48px;width: 48px;}
+}
+.activeliA{background-color:#f3f7f9;} 
+.iccolor{color: #62a8ea;}
+.datepicker{z-index:1800 !important;}
+/*============END Must - Not touch it withot knowing about css==========*/
+*:focus {outline:none !important;outline-style:none;box-shadow:none;border-color:transparent;}}
+:focus {outline:none !important;outline-style:none;box-shadow:none;border-color:transparent;}
+select:-moz-focusring,select::-moz-focus-inner{color:transparent !important;text-shadow:0 0 0 #000 !important;background-image:none !important;border:0}
+
+
+
+
+

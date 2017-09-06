@@ -1,0 +1,9 @@
+
+
+         <!-- MySQL to Excel Output Servlet Declaration -->
+
+	<servlet servlet-name='excel_from_sql' servlet-class='com.webapp.servlet.sqltoexcel' >
+	         <init-param SQL-ENGINE="MYSQL"  />
+                 <init-param DSN="jdbc/$WEBAPP"  />
+	</servlet>		 
+	<servlet-mapping url-pattern='/getexcelfromquery/*' servlet-name='excel_from_sql'/>

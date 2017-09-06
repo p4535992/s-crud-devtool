@@ -1,0 +1,50 @@
+<div class="page-header">
+  <h1 class="page-title"><i class="fa fa-send-o"></i>&nbsp;&nbsp;Party Begin...</h1>
+	<p class="page-description">Page Description Here.</p>
+   <div class="page-header-actions">
+      <ol class="breadcrumb">
+         <li><a href="../index-2.html">Home</a></li>
+         <li><a href="javascript:void(0)">Layouts</a></li>
+         <li class="active">Headers</li>
+      </ol>
+   </div>
+</div>
+
+.page-header {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-top: 0;
+    padding: 5px 12px;
+    position: relative;
+}
+.page-header p {
+    margin: 2px 0 2px;
+}
+.page-title {
+    font-size: 26px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.page-header-actions {
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.page-description {
+    color: #a3afb7;
+		padding-left: 42px;
+}
+.page-header .breadcrumb {
+    margin: 0;
+    padding: 0;
+}
+.breadcrumb {
+    background-color: transparent;
+    border-radius: 3px;
+    list-style: outside none none;
+    margin-bottom: 22px;
+    padding: 8px 10px;
+}
