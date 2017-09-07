@@ -124,7 +124,7 @@ $(document).ready(function() {
                     },
                     remote: {
                         message: 'The Code is not correct',
-                        url: '<%=appPath %>/backend/validation/realperson_captchavalidation.jsp',
+                        url: 'realperson_captchavalidation.jsp',
                         data: {
 														realPersoncaptchaHash: $('#realPersoncaptcha').realperson('getHash')
                         },
