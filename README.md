@@ -16,11 +16,11 @@ Automate S-CRUDE Operation [jsp/servlet]
 here "s" belongs to search Action & crud means create - read - update - delete
 
 
-+ recent active development 
+# recent active development 
 remove hard-coded JDBC queries 
 add Hibernate ORM support
 
-+ goal
+# goal
 add angular 4 as front-end [kind of big deal, b'coz it will force me to rewrite lots of code]
 
 
