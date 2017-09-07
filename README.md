@@ -1,7 +1,7 @@
 # s-crud-devtool
 Automate S-CRUDE Operation [jsp/servlet]
 
-++ what this Repid development tool
+++ what this Repid development tool can do
 
 + write DAO (Data Access Object ) 
 
