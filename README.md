@@ -17,8 +17,7 @@ here "s" belongs to search Action & crud means create - read - update - delete
 
 
 # recent active development 
-remove hard-coded JDBC queries 
-add Hibernate ORM support
+remove hard-coded JDBC queries & add Hibernate ORM support
 
 # goal
 add angular 4 as front-end [kind of big deal, b'coz it will force me to rewrite lots of code]
