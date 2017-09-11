@@ -1,5 +1,5 @@
 # s-crud-devtool
-Automate S-CRUDE Operation [jsp/servlet]
+Automate S-CRUD Operation [jsp/servlet]
 
 ++ what this Repid development tool can do
 
